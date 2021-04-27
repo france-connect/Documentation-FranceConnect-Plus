@@ -1,0 +1,36 @@
+```mermaid
+sequenceDiagram
+    participant U as Utilisateur
+    participant FC
+    participant FI 
+    
+    Note right of U : L'utilisateur a <br/>choisi son FI
+    FC->>FI: GET [issuer]/.well-known/openid-configuration
+    FI-->>FC: HTTP 200
+    Note left of FI : FC récupère les <br/>métadatas du FI
+
+    FC->>FI: GET [jwks_uri]
+    FI-->>FC: HTTP 200
+    Note left of FI : FC récupère les clés <br/>publiques du FI
+
+    FC-->>U : Redirect 302 [authorization_endpoint]
+    
+    U->>FI : GET [authorization_endpoint]
+    Note left of FI : Authentification <br/>utilisateur par le FI<br/><br/>(Implémentation <br/>spécifique au FI)
+   
+
+    FI-->>U: Redirect 302 [fc issuer]/oidc-callback/{fc-internal-id}
+    
+    U->>FC: GET [fc issuer]/oidc-callback/{fc-internal-id}
+   
+    FC->>FI: POST [token_endpoint]
+    FI-->>FC: HTTP 200
+    
+    FC->>FI: GET [userinfo_endpoint]
+    FI-->>FC: HTTP 200
+
+    Note left of FI : Le FI détruit <br/>la session de <br/>l'utilisateur
+
+
+
+```
