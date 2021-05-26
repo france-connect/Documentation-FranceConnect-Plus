@@ -65,7 +65,7 @@ Les adresses de notre environnement de production sont les suivantes :
 
 ## Réaliser des tests avant de soumettre sa demande d'habilitation
 
-Un fournisseur de Service de démonstration est disponible à l'adresse  [fsp1v2.integ01.dev-franceconnect.fr](https://fsp1v2.integ01.dev-franceconnect.fr//). 
+Un fournisseur de Service de démonstration est disponible à l'adresse  [https://fsp1v2.integ01.fcp.fournisseur-de-service.fr/](https://fsp1v2.integ01.fcp.fournisseur-de-service.fr/). 
 
 # Concepts de base
 ## Le protocole OpenID Connect
