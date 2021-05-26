@@ -21,6 +21,16 @@ Vous souhaitez devenir Fournisseur de Service pour FranceConnect+, voici les que
 * [Je suis déjà Fournisseur de Service pour FranceConnect, que dois je faire en plus pour devenir Fournisseur de Service pour FranceConnect+ ?](pilotage/pilotage-integrer-fc+-apres-fc.md)
 
 
+# Je gère un projet d'intégration de FranceConnect+
+
+Vous avez lancé un projet pour devenir FranceConnect+ et vous souhaiter connaitre les différentes problématique d'intégration de FranceConnect+, voici les questions à vous poser : 
+
+## Je souhaite savoir comment fonctionnement FranceConnect+
+
+- [Quelles sont les données que je peux récupérer par FranceConnect+ sur mes usagers ?](projet/projet-donnees-fc+.md)
+- [Qu'est ce qu'eIDAS et quels sont les niveaux de garantie de FranceConnect+ ?](projet/projet-niveau-eidas.md)
+- [Quel est l'écosystème de FranceConnect+ ?](projet/projet-ecosysteme-fc+.md)
+
 ## Accès à l'environnement d'intégration FranceConnect+
 
 Pour vous permettre de réaliser les développements liés à l'intégration de FranceConnect, nous mettons à disposition un environnement d'intégration. Les accès à cet environnement se font à travers des clés qui vous sont communiquées sur votre espace partenaire. 
