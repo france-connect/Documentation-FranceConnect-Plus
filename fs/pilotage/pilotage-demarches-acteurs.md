@@ -1,8 +1,19 @@
-# Les acteurs à impliquer dans l'intégration de FranceConnect+
+[Documentation Fournisseur de Service](README.md) > [Devenir Fournisseur de Service FranceConnect+](../README.md#je-veux-devenir-fournisseur-de-service) > Acteurs à impliquer
+
+---
+
+# Quels sont les acteurs à impliquer dans l'intégration de FranceConnect+
 
 Pour devenir Fournisseur de Service de FranceConnect+, il est nécessaire de designé des personnes remplissants les rôles suivants : Responsable de traitement, Délégué à la protection des données, Responsable technique, Responsable de la Sécurité du Système d'Information. 
 
 Il vous sera demandé lors de la demande d'habilitation à FranceConnec+ d'identifier les personnes ayant ces responsabilités. 
+
+Les acteurs à impliquer sont les suivants : 
+
+- Le responsable de traitement
+- le délégué à la protection des données
+- le responsable technique
+- le responsable de la sécurité dur système d'information 
 
 
 ## Responsable de traitement

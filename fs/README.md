@@ -3,6 +3,8 @@ Documentation Fournisseur de Service
 
 ---
 
+Vous souhaitez implémenter FranceConnect+ sur votre site? Vous êtes au bon endroit ! Cette documentation présente l'ensemble des informations à connaitre sur FranceConnect+
+
 # Préambule
 
 Cette documentation est à destination des Fournisseurs de Service souhaitant intégrer FranceConnect+. 
@@ -13,8 +15,11 @@ FranceConnect+ s'implémente sur une plateforme distincte de la plateforme Franc
 
 Vous souhaitez devenir Fournisseur de Service pour FranceConnect+, voici les questions à vous poser : 
 
-* [Quelles sont les étapes pour devenir Fournisseur de Service](devenir-fs.md)
-* [Quels sont les différents acteurs que je dois faire intervenir dans mon organisation pour devenir Fournisseur de Service](pilotage-demarches-acteurs.gmd)
+* [Quelles sont les étapes pour devenir Fournisseur de Service ?](pilotage/pilotage-etapes.md)
+* [Quels sont les différents acteurs que je dois faire intervenir dans mon organisation pour devenir Fournisseur de Service ?](pilotage/pilotage-demarches-acteurs.md)
+* [Quelles sont les différences entre FranceConnect et FranceConnect+ ?](pilotage/pilotage-differences-fc-fc+.md)
+* [Je suis déjà Fournisseur de Service pour FranceConnect, que dois je faire en plus pour devenir Fournisseur de Service pour FranceConnect+ ?](pilotage/pilotage-integrer-fc+-apres-fc.md)
+
 
 ## Accès à l'environnement d'intégration FranceConnect+
 
