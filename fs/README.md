@@ -1,26 +1,24 @@
+
+Documentation Fournisseur de Service
+
+---
+
 # Préambule
 
 Cette documentation est à destination des Fournisseurs de Service souhaitant intégrer FranceConnect+. 
 FranceConnect+ met à disposition du Fournisseur de Service des identités de niveau de garantie eIDAS Susbtantiel et Elevé. 
-FranceConnect+ s'implémente sur une plateforme distincte de la plateforme dite "Standard" qui reste dédiée aux identités de niveau de garantie "faible".
+FranceConnect+ s'implémente sur une plateforme distincte de la plateforme FranceConnect qui reste dédiée aux identités de niveau de garantie "faible".
 
 # Je veux devenir Fournisseur de Service 
 
-## Quelles sont les étapes pour devenir Fournisseur de Service ? 
+Vous souhaitez devenir Fournisseur de Service pour FranceConnect+, voici les questions à vous poser : 
 
-1. Vous consultez les conditions d'éligibilité à FranceConnect+. Les conditions juridiques, de sécurité et de qualité de service sont détaillées dans nos [conditions générales d'utilisation](https://partenaires.franceconnect.gouv.fr/cgu). Le cadre d'implémentation et d'intégration est détaillé dans nos [spécifications ergonomiques](https://partenaires.franceconnect.gouv.fr/fcp/fournisseur-service#acceptance) **TODO** *mettre à jour le lien* .
-
-2. Vous soumettez une demande d'habilitation  via [datapass.api.gouv.fr](https://datapass.api.gouv.fr/) et vous transmettez toutes les informations nécessaires à la validation de votre demande (respect du RGPD, contact du responsable technique, niveau de garantie eIDAS souhaité, données d'identité recueillies, etc). Votre demande est validée par le service juridique de la DINUM dans un délai moyen de 5 jours ouvrés.
-
-3. Si votre demande est acceptée, votre responsable technique reçoit un mail lui donnant accès à l'[espace partenaire](https://partenaires.franceconnect.gouv.fr/login). Cet espace vous permettra d'accéder aux ressources de développement et de test.
-
-4. Vous présentez vos développements pour une qualification par l'équipe FranceConnect+. La durée de cette phase de qualification dépend du [respect des prérequis ](https://partenaires.franceconnect.gouv.fr/monprojet/recetter/)(techniques, sécurité, fonctionnels, UX...). N'hésitez pas à soumettre vos maquettes de parcours en amont pour une pré-qualification fonctionnelle et UX anticipée.
-
-5. Si votre implémentation est validée par notre équipe, vous recevez vos secrets pour passer en production.
+* [Quelles sont les étapes pour devenir Fournisseur de Service](devenir-fs.md)
+* [Quels sont les différents acteurs que je dois faire intervenir dans mon organisation pour devenir Fournisseur de Service](pilotage-demarches-acteurs.gmd)
 
 ## Accès à l'environnement d'intégration FranceConnect+
 
-Pour vous permettre de réaliser les développements liés à  l'intégration de FranceConnect+, nous mettons à disposition un environnement d'intégration. Les accès à cet environnement se font à travers des clés qui vous sont communiquées sur votre espace partenaire. 
+Pour vous permettre de réaliser les développements liés à l'intégration de FranceConnect, nous mettons à disposition un environnement d'intégration. Les accès à cet environnement se font à travers des clés qui vous sont communiquées sur votre espace partenaire. 
 
 Sur notre environnement d'intégration, vous pouvez utiliser le fournisseur d'identité "Démonstration" dont les données sont modifiables ici : https://github.com/france-connect/identity-provider-example/blob/master/database.csv
 
@@ -59,7 +57,7 @@ Les adresses de notre environnement de production sont les suivantes :
 
 ## Réaliser des tests avant de soumettre sa demande d'habilitation
 
-Un fournisseur de Service de démonstration est disponible à l'adresse  [https://fsp1v2.integ01.fcp.fournisseur-de-service.fr/](https://fsp1v2.integ01.fcp.fournisseur-de-service.fr/). 
+Un fournisseur de Service de démonstration est disponible à l'adresse  [fsp1v2.integ01.dev-franceconnect.fr](https://fsp1v2.integ01.dev-franceconnect.fr//). 
 
 # Concepts de base
 ## Le protocole OpenID Connect
@@ -316,17 +314,33 @@ L'identité pivot complète se récupère soit par le scope identite_pivot, soit
 
 * **ID_TOKEN :** Objet JWT retourné par l'appel au endpoint FC_URL/api/21/token. L'objet JWT est un objet JSON formatté et signé. Le JSON doit contenir ces six clés : aud,exp,iat,iss,sub et nonce.
 
-Exemple :
+Exemple de JWT : 
 
 ```
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2ZjcC5kb2NrZXIuZGV2LWZyYW5jZWNvbm5lY3QuZnIiLCJzdWIiOiI0ZDMyN2RkMWU0MjdkYWY0ZDUwMjk2YWI3MWQ2ZjNmYzgyY2NjNDA3NDI5NDM1MjFkNDJjYjJiYWU0ZGY0MWFmdjEiLCJhdWQiOiJhMGNkNjQzNzJkYjZlY2YzOWMzMTdjMGM3NGNlOTBmMDJkOGFkN2Q1MTBjZTA1NDg4M2I3NTlkNjY2YTk5NmJjIiwiZXhwIjoxNjE5NjA0NTE4LCJpYXQiOjE2MTk2MDQ0NTgsIm5vbmNlIjoiY3VzdG9tTm9uY2UxMSIsImlkcCI6IkZDIiwiYWNyIjoiZWlkYXMxIiwiYW1yIjpudWxsfQ.AdbcnBJluh1UZb4ylEM6oSoarHw-Cb_4--kFWfOJre4
+```
+
+Exemple de header du JWT :
+```json
 {
-    'aud':'895fae591ccae777094931e269e46447',
-    'exp':1412953984,
-    'iat':1412950384,
-    'iss':http://franceconnect.gouv.fr,
-    'sub':YWxhY3JpdMOp,
-    'idp':'FC',
-    'nonce':'12344354597459'
+  "typ": "JWT",
+  "alg": "HS256"
+}
+```
+
+Exemple de payload du JWT :
+
+```json
+{
+  "iss": "https://fcp.docker.dev-franceconnect.fr",
+  "sub": "4d327dd1e427daf4d50296ab71d6f3fc82ccc40742943521d42cb2bae4df41afv1",
+  "aud": "a0cd64372db6ecf39c317c0c74ce90f02d8ad7d510ce054883b759d666a996bc",
+  "exp": 1619604518,
+  "iat": 1619604458,
+  "nonce": "customNonce11",
+  "idp": "FC",
+  "acr": "eidas1",
+  "amr": null
 }
 ```
 Les champs *aud, exp, iat, iss, sub* sont des champs obligatoires de la norme OpenId Connect. Le *nonce* est un  paramètre obligatoirement envoyé lors de l'appel à `/authorization`. Le FS doit impérativement vérifier que la valeur correspond bien à celle qu'il a envoyée, et qui doit être liée à la session de l'utilisateur.
