@@ -23,5 +23,6 @@ FranceConnect+ transmet systématiquement au Fournisseur de Service un identifia
 
 * Cet identifiant est spécifique à chaque Fournisseur de Service. Un même utilisateur aura donc un identifiant unique différent pour chacun des Fournisseurs de Service auxquels il accède. 
 * Cet identifiant est le même quelque soit le Fournisseur d'Identité qui est utilisé par l'utilisateur. 
+* Cet identifiant n'est amené à changer quand dans le cas particulier où l'utilisateur a fait modifié ses données d'état civil. Dans tous les autres cas, cet identifiant sera systématiquement le même. 
 
 Les données d'identité fournies au fournisseur de service sont celles directement issues du fournisseur d'identité choisi par l'utilisateur. Ces données peuvent donc légèrement varier d'un fournisseur d'identité à l'autre, nous préconisons donc de réaliser le rapprochement/réconciliation sur la base de l'identifiant unique de l'utilisateur fourni par FranceConnect+.
