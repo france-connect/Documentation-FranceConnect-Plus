@@ -1,32 +1,26 @@
-
-
-
-[[_TOC_]]
-
-
 # Préambule
 
-Cette documentation est à destination des Fournisseurs de Service souhaitant intégrer FranceConnect PLUS. 
-FranceConnect PLUS met à disposition du Fournisseur de Service des identités de niveau de garantie eIDAS Susbtantiel et Elevé. 
-FranceConnect PLUS s'implémente sur une plateforme distincte de la plateforme dite "Standard" qui reste dédiée aux identités de niveau de garantie "faible".
+Cette documentation est à destination des Fournisseurs de Service souhaitant intégrer FranceConnect+. 
+FranceConnect+ met à disposition du Fournisseur de Service des identités de niveau de garantie eIDAS Susbtantiel et Elevé. 
+FranceConnect+ s'implémente sur une plateforme distincte de la plateforme dite "Standard" qui reste dédiée aux identités de niveau de garantie "faible".
 
 # Je veux devenir Fournisseur de Service 
 
 ## Quelles sont les étapes pour devenir Fournisseur de Service ? 
 
-1. Vous consultez les conditions d'éligibilité à FranceConnect. Les conditions juridiques, de sécurité et de qualité de service sont détaillées dans nos [conditions générales d'utilisation](https://partenaires.franceconnect.gouv.fr/cgu). Le cadre d'implémentation et d'intégration est détaillé dans nos [spécifications ergonomiques](https://partenaires.franceconnect.gouv.fr/fcp/fournisseur-service#acceptance) **TODO** *mettre à jour le lien* .
+1. Vous consultez les conditions d'éligibilité à FranceConnect+. Les conditions juridiques, de sécurité et de qualité de service sont détaillées dans nos [conditions générales d'utilisation](https://partenaires.franceconnect.gouv.fr/cgu). Le cadre d'implémentation et d'intégration est détaillé dans nos [spécifications ergonomiques](https://partenaires.franceconnect.gouv.fr/fcp/fournisseur-service#acceptance) **TODO** *mettre à jour le lien* .
 
 2. Vous soumettez une demande d'habilitation  via [datapass.api.gouv.fr](https://datapass.api.gouv.fr/) et vous transmettez toutes les informations nécessaires à la validation de votre demande (respect du RGPD, contact du responsable technique, niveau de garantie eIDAS souhaité, données d'identité recueillies, etc). Votre demande est validée par le service juridique de la DINUM dans un délai moyen de 5 jours ouvrés.
 
 3. Si votre demande est acceptée, votre responsable technique reçoit un mail lui donnant accès à l'[espace partenaire](https://partenaires.franceconnect.gouv.fr/login). Cet espace vous permettra d'accéder aux ressources de développement et de test.
 
-4. Vous présentez vos développements pour une qualification par l'équipe FranceConnect. La durée de cette phase de qualification dépend du [respect des prérequis ](https://partenaires.franceconnect.gouv.fr/monprojet/recetter/)(techniques, sécurité, fonctionnels, UX...). N'hésitez pas à soumettre vos maquettes de parcours en amont pour une pré-qualification fonctionnelle et UX anticipée.
+4. Vous présentez vos développements pour une qualification par l'équipe FranceConnect+. La durée de cette phase de qualification dépend du [respect des prérequis ](https://partenaires.franceconnect.gouv.fr/monprojet/recetter/)(techniques, sécurité, fonctionnels, UX...). N'hésitez pas à soumettre vos maquettes de parcours en amont pour une pré-qualification fonctionnelle et UX anticipée.
 
 5. Si votre implémentation est validée par notre équipe, vous recevez vos secrets pour passer en production.
 
-## Accès à l'environnement d'intégration FranceConnect
+## Accès à l'environnement d'intégration FranceConnect+
 
-Pour vous permettre de réaliser les développements liés à  l'intégration de FranceConnect, nous mettons à disposition un environnement d'intégration. Les accès à cet environnement se font à travers des clés qui vous sont communiquées sur votre espace partenaire. 
+Pour vous permettre de réaliser les développements liés à  l'intégration de FranceConnect+, nous mettons à disposition un environnement d'intégration. Les accès à cet environnement se font à travers des clés qui vous sont communiquées sur votre espace partenaire. 
 
 Sur notre environnement d'intégration, vous pouvez utiliser le fournisseur d'identité "Démonstration" dont les données sont modifiables ici : https://github.com/france-connect/identity-provider-example/blob/master/database.csv
 
@@ -46,7 +40,7 @@ Les adresses de notre environnement d'intégration sont les suivantes :
 
 Pour mettre en production votre Fournisseur de Service, il faut au préalable avoir : 
 
-1. Reçu la qualification de vos développements par FranceConnect sur un environnement autre que votre production. 
+1. Reçu la qualification de vos développements par FranceConnect+ sur un environnement autre que votre production. 
 2. Demandé une mise en production à travers votre [espace partenaire]((https://partenaires.franceconnect.gouv.fr/login)) 
 3. Utilisé les clés de production qui vous ont été fournies par FranceConnect. 
 
@@ -91,15 +85,15 @@ Lorsque l'internaute clique sur le bouton d'authentification du client, le flux 
 
 ### Dans le cadre de FranceConnect
 
-L'enregistrement des Fournisseurs de Service auprès de FranceConnect s'effectue en déposant une demande sur le site [datapass.api.gouv.fr](https://datapass.api.gouv.fr/)
+L'enregistrement des Fournisseurs de Service auprès de FranceConnect+ s'effectue en déposant une demande sur le site [datapass.api.gouv.fr](https://datapass.api.gouv.fr/)
 
-FranceConnect implémente le flux [Authorization Code Flow](https://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth) d'OpenID Connect. 
+FranceConnect+ implémente le flux [Authorization Code Flow](https://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth) d'OpenID Connect. 
 
-Les fournisseurs de service doivent être clients OpenID Connect, et les fournisseurs d'identité doivent être fournisseurs OpenID Connect. FranceConnect est une brique intermédiaire qui est à la fois fournisseur (du point de vue des FS) et client (du point de vue des FI).
+Les fournisseurs de service doivent être clients OpenID Connect, et les fournisseurs d'identité doivent être fournisseurs OpenID Connect. FranceConnect+ est une brique intermédiaire qui est à la fois fournisseur (du point de vue des FS) et client (du point de vue des FI).
 
 ### Chiffrement et signature des échanges
 
-Tous les échanges de jetons JWT entre FranceConnect et le Fournisseur de Service sont signés et chiffrés en utilisant les algorithmes suivants :
+Tous les échanges de jetons JWT entre FranceConnect+ et le Fournisseur de Service sont signés et chiffrés en utilisant les algorithmes suivants :
 
 **Signature de jetons par le FI** :
 
@@ -121,7 +115,7 @@ Les spécifications des algorithmes de signatures et de chiffrements utilisés s
 * [JWS - https://tools.ietf.org/html/rfc7515#appendix-A.3](https://tools.ietf.org/html/rfc7515#appendix-A.3)
 * [JWE - https://tools.ietf.org/html/rfc7516#appendix-A.1](https://tools.ietf.org/html/rfc7516#appendix-A.1)
 
-Les clés publiques de signatures de FranceConnect sont disponibles via la *JWKS URL* présente dans les méta-data de la *Discovery URL* à l'adresse suivantes et sont changées régulièrement :
+Les clés publiques de signatures de FranceConnect+ sont disponibles via la *JWKS URL* présente dans les méta-data de la *Discovery URL* à l'adresse suivantes et sont changées régulièrement :
 
 | Environnement | adresses du endpoint |
 | ------ | ------ |
@@ -146,7 +140,7 @@ En complément, il est possible d'obtenir le nom d'usage. Cependant cette donné
 
 Vous pouvez avoir accès également à l'adresse email. Cette donnée de contact a également été vérifiée par le Fournisseur d'identité. Il est à remarquer que la donnée "adresse email" peut différer selon le Fournisseur d'Identité choisi par l'usager.
 
-FranceConnect transmet systématiquement au Fournisseur de Service un identifiant unique pour chaque utilisateur : 
+FranceConnect+ transmet systématiquement au Fournisseur de Service un identifiant unique pour chaque utilisateur : 
 
 * Cet identifiant est spécifique à chaque Fournisseur de Service. Un même utilisateur aura donc un identifiant unique différent pour chacun des Fournisseurs de Service auxquels il accède. 
 * Cet identifiant est le même quelque soit le Fournisseur d'Identité qui est utilisé par l'utilisateur. 
@@ -156,7 +150,7 @@ A noter que pour les niveaux de garantie d'identité eIDAS 2 et 3 (substantiel e
 
 ### Liste des scopes disponible lors de l'étape d'authentification FranceConnect
 
-FranceConnect a étendu le mécanisme de scopes pour qu'il soit plus modulaire.
+FranceConnect+ a étendu le mécanisme de scopes pour qu'il soit plus modulaire.
 
 * Un seul scope est obligatoire : openid. Il permet de récupérer le sub (identifiant unique technique) de l'utilisateur.
 * Il est possible de récupérer individuellement chaque propriété de l'identité pivot en utilisant leurs scopes dédiés.
@@ -196,9 +190,9 @@ Cette liste de scopes est définie par la norme OpenIDConnect : http://openid.ne
 
 # Je veux identifier/authentifier des utilisateurs via FranceConnect
 
-# Intégration d'un bouton FranceConnect PLUS
+# Intégration d'un bouton FranceConnect+
 
-Les boutons d’action FranceConnect PLUS sont primordiaux dans l’usage du service. Il est obligatoire d’utiliser l’un des boutons proposé et aucun autre visuel pour la connexion des usagers.
+Les boutons d’action FranceConnect+ sont primordiaux dans l’usage du service. Il est obligatoire d’utiliser l’un des boutons proposé et aucun autre visuel pour la connexion des usagers.
 
 Pour les boutons en svg, lors de l'utilisation d'une image veuillez préciser la taille du bouton.
 
@@ -220,15 +214,15 @@ La récupération de l'identité pivot doit être faite dans la suite immédiate
 
 ### Détail des flux
 
-Les flux entre FranceConnect et le Fournisseur de Service respectent ce qui est défini dans la norme OpenId Connect. Pour plus de détails, il faut se référer à la [documentation OIDC - https://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth](https://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth)
+Les flux entre FranceConnect+ et le Fournisseur de Service respectent ce qui est défini dans la norme OpenId Connect. Pour plus de détails, il faut se référer à la [documentation OIDC - https://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth](https://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth)
 
 ## Utiliser les niveaux eIDAS en tant que FS
 
 EIDAS est un standard européen visant à normaliser et à améliorer la sécurité de l'identification sur Internet. Il propose notamment 3 niveaux de garantie sur les moyens utilisés pour l'identification. Vous pouvez, en tant que Fournisseur de Service, utiliser les niveaux eIDAS afin de récupérer une identité avec le niveau de garantie correspondant à votre besoin. 
 
-Comme la norme ne prévoit pas aujourd'hui de mesures techniques particulières pour préciser le niveau souhaité, FranceConnect utilise le claim optionnel "acr" (http://openid.net/specs/openid-connect-basic-1_0.html#RequestParameters) de la norme OpenID Connect. Pour le Fournisseur de Service, cela veut dire remplir le claim optionnel acr_values lors de la demande d'authentification (appel à l'endpoint /api/v2/authorize).
+Comme la norme ne prévoit pas aujourd'hui de mesures techniques particulières pour préciser le niveau souhaité, FranceConnect+ utilise le claim optionnel "acr" (http://openid.net/specs/openid-connect-basic-1_0.html#RequestParameters) de la norme OpenID Connect. Pour le Fournisseur de Service, cela veut dire remplir le claim optionnel acr_values lors de la demande d'authentification (appel à l'endpoint /api/v2/authorize).
 
-Au sujet du claim acr_values, on notera que c'est, selon la norme, un "voluntary claim" qui théoriquement traduit une préférence et non une exigence.  Lorsque ce claim est fourni, FranceConnect ne proposera à l'utilisateur que les Fournisseurs d'Identité pouvant satisfaire le niveau eIDAS demandé. En retour, le Fournisseur d'Identité renverra par le biais de FranceConnect le niveau eIDAS avec lequel l'authentification a eu lieu. Le Fournisseur de Service doit vérifier le niveau eIDAS utilisé afin de s'assurer que celui-ci est bien conforme  au niveau eIDAS attendu.
+Au sujet du claim acr_values, on notera que c'est, selon la norme, un "voluntary claim" qui théoriquement traduit une préférence et non une exigence.  Lorsque ce claim est fourni, FranceConnect+ ne proposera à l'utilisateur que les Fournisseurs d'Identité pouvant satisfaire le niveau eIDAS demandé. En retour, le Fournisseur d'Identité renverra par le biais de FranceConnect+ le niveau eIDAS avec lequel l'authentification a eu lieu. Le Fournisseur de Service doit vérifier le niveau eIDAS utilisé afin de s'assurer que celui-ci est bien conforme  au niveau eIDAS attendu.
 
 Exemple d'appel précisant un niveau eIDAS minimum :
 
@@ -243,17 +237,17 @@ Afin d'y arriver, il faut spécifier une ou plusieurs valeurs parmi les suivante
 
 
 Si le claim acr n'est pas précisé, le niveau par défaut est fixé à eidas3, le plus sécurisé.
-Si le claim est précisé, FranceConnect ne proposera à l'utilisateur que les fournisseurs d'identité de niveau supérieur ou égal. Sinon, FranceConnect ne proposera à l'utilisateur que les Fournisseurs d'Identité de niveau élevé.
-Si plusieurs niveaux sont précisés, FranceConnect prend en compte le niveau le plus bas.
-Si le claim est considéré par FranceConnect comme n'étant pas valide, le niveau par défaut est utilisé.
-Le niveau eIDAS utilisé pour l'authentification est retourné par le fournisseur d'identité (cf la documentation du FI), par le biais de FranceConnect (qui le transmet sans le modifier) et du claim acr dans l'ID Token retourné au Fournisseur de Service.
+Si le claim est précisé, FranceConnect+ ne proposera à l'utilisateur que les fournisseurs d'identité de niveau supérieur ou égal. Sinon, FranceConnect+ ne proposera à l'utilisateur que les Fournisseurs d'Identité de niveau élevé.
+Si plusieurs niveaux sont précisés, FranceConnect+ prend en compte le niveau le plus bas.
+Si le claim est considéré par FranceConnect+ comme n'étant pas valide, le niveau par défaut est utilisé.
+Le niveau eIDAS utilisé pour l'authentification est retourné par le fournisseur d'identité (cf la documentation du FI), par le biais de FranceConnect+ (qui le transmet sans le modifier) et du claim acr dans l'ID Token retourné au Fournisseur de Service.
 
 Il est de la responsabilité du Fournisseur de service de s'assurer que le niveau retourné est au moins égal ou supérieur à celui demandé (si eidas2 est demandé, eidas3 doit être accepté tout comme eidas2).
 
 
 # Je veux déconnecter l'utilisateur de FranceConnect
 
-Pour les niveaux Substantiel et Elevé, FranceConnect ne gère pas de session utilisateur et demande systématique à l'utilisateur de se ré-authentifier auprès d'un Founisseur d'Identité.
+Pour les niveaux Substantiel et Elevé, FranceConnect+ ne gère pas de session utilisateur et demande systématique à l'utilisateur de se ré-authentifier auprès d'un Founisseur d'Identité.
 
 Cependant, il est tout de même demandé au Fournisseur de Service de gérer : 
 * la déconnexion auprès de FranceConnect
@@ -261,35 +255,35 @@ Cependant, il est tout de même demandé au Fournisseur de Service de gérer :
 
 ## Cinématique de déconnexion par un Fournisseur de Service
 
-FranceConnect implémente la section sur la déconnexion en cours de spécification dans la norme OpenID Connect : https://openid.net/specs/openid-connect-frontchannel-1_0.html#RPLogout
+FranceConnect+ implémente la section sur la déconnexion en cours de spécification dans la norme OpenID Connect : https://openid.net/specs/openid-connect-frontchannel-1_0.html#RPLogout
 
-FranceConnect ne gère pas la déconnexion de l'usager au service FranceConnect à la fermeture du navigateur.
+FranceConnect+ ne gère pas la déconnexion de l'usager au service FranceConnect+ à la fermeture du navigateur.
 
 Le Fournisseur de Service doit pouvoir déconnecter l'utilisateur de sa session FranceConnect. La cinématique globale est celle-ci :
 
 1. L' utilisateur clique sur un lien de déconnexion présenté par le FS.
 2. Le FS doit déconnecter l'utilisateur de son application et de sa session FranceConnect.
 3. L' utilisateur est redirigé vers la page de retour spécifiée par le FS.
-4. Le FS doit préciser l'URL où l'on doit rediriger l'utilisateur une fois qu'il a choisi de se déconnecter ou non de FranceConnect via le paramètre post_logout_redirect_uri, ainsi que passer l'id_token récupéré lors de l'authentification de l'utilisateur via le paramètre id_token_hint.
+4. Le FS doit préciser l'URL où l'on doit rediriger l'utilisateur une fois qu'il a choisi de se déconnecter ou non de FranceConnect+ via le paramètre post_logout_redirect_uri, ainsi que passer l'id_token récupéré lors de l'authentification de l'utilisateur via le paramètre id_token_hint.
 
 Il est obligatoire de renseigner les différentes urls de redirections de déconnexion dans les paramètres client
 
 ## Révocation de l'access token
 
-En tant que Fournisseur de Service, vous avez la possibilité de révoquer un *access token*. Pour cela, FranceConnect respecte les spécifications OAuth 2.0 sur lesquelles se base OpenId Connect. La spécification de la révocation de token se trouve à cette adresse https://tools.ietf.org/html/rfc7009 
+En tant que Fournisseur de Service, vous avez la possibilité de révoquer un *access token*. Pour cela, FranceConnect+ respecte les spécifications OAuth 2.0 sur lesquelles se base OpenId Connect. La spécification de la révocation de token se trouve à cette adresse https://tools.ietf.org/html/rfc7009 
 
-# Gestion d'erreurs entre FranceConnect et le Fournisseur de Service
+# Gestion d'erreurs entre FranceConnect+ et le Fournisseur de Service
 
-En tant qu'OpenID Connect provider, FranceConnect peut renvoyer toutes sortes d'erreurs à une application cliente. Pour ce faire, FranceConnect passe par le mécanisme de retour d'erreurs d'un fournisseur d'identité openid connect tel que décrit dans la norme ( http://openid.net/specs/openid-connect-core-1_0.html#AuthError, en particulier les sections 3.1.2.6 (authentification), 3.1.3.4 (jeton d'accès), 5.3.3 (service d'informations utilisateur) )
+En tant qu'OpenID Connect provider, FranceConnect+ peut renvoyer toutes sortes d'erreurs à une application cliente. Pour ce faire, FranceConnect+ passe par le mécanisme de retour d'erreurs d'un fournisseur d'identité openid connect tel que décrit dans la norme ( http://openid.net/specs/openid-connect-core-1_0.html#AuthError, en particulier les sections 3.1.2.6 (authentification), 3.1.3.4 (jeton d'accès), 5.3.3 (service d'informations utilisateur) )
 
 
-# Les données de FranceConnect qui expirent
+# Les données de FranceConnect+ qui expirent
 
-FranceConnect gère plusieurs types de données ayant une durée de vie limitée lors du déroulé d'une authentification par OpenID Connect ou de la fourniture d'un jeton d'accès à une ressource protégée (cinématique OAuth2 classique). Chacune de ces données possède une durée de vie qui lui est propre au delà de laquelle elle doit être régénérée. En voici le détail :
+FranceConnect+ gère plusieurs types de données ayant une durée de vie limitée lors du déroulé d'une authentification par OpenID Connect ou de la fourniture d'un jeton d'accès à une ressource protégée (cinématique OAuth2 classique). Chacune de ces données possède une durée de vie qui lui est propre au delà de laquelle elle doit être régénérée. En voici le détail :
 
 | Type | Utilisé lors de ... | Durée de vie |
 | ------ | ------ | ------ |
-| Session Web | A chaque authentification et pour maintenir la session côté FranceConnect | 30 minutes sans action |
+| Session Web | A chaque authentification et pour maintenir la session côté FranceConnect+ | 30 minutes sans action |
 | Access Token | Récupération d'informations (phase 3 cinématique d'authentification / cinématique OAuth2) | 60 secondes |
 | Authorization code | Code fourni lors du début de la démarche d'authentification, il sert ensuite à récupérer l'access token | 30 secondes |
 | Consentement | Consentement donné par l'utilisateur pour l'accès à une ressource protégée (associée à un scope au sens OAuth2) | 5 secondes |
@@ -298,7 +292,7 @@ FranceConnect gère plusieurs types de données ayant une durée de vie limitée
 # Glossaire
 
 
-* **FC_URL :**  URL de FranceConnect 
+* **FC_URL :**  URL de FranceConnect+ 
 * **FS_URL :** Votre URL, en tant que fournisseur de service  
 * **FD_URL :** URL du fournisseur de données
 * **CALLBACK_URL_DATA :** le callback du FS, communiqué lors de son inscription auprès de FC 
@@ -309,7 +303,7 @@ FranceConnect gère plusieurs types de données ayant une durée de vie limitée
 * **ACCESS_TOKEN :** oken retourné (dans le corps HTTP) par l'appel au endpoint FC_URL/api/v2/token. Il est ensuite passé lors de l'appel au endpoint FC_URL/api/v2/userinfo 
 * **SCOPES :** Liste des scopes demandés séparés par des espaces (donc par %20 au format unicode dans l'URL)  
 	
-Voici la liste supportée par FranceConnect :
+Voici la liste supportée par FranceConnect+ :
 
     * openid : obligatoire, permet de demander l'identifiant technique de l'utilisateur au format OpenIDConnect
     * profile : obligatoire, permet de récupérer l'essentiel de l'identité pivot. Si disponible, renvoie aussi le preferred_username
@@ -344,4 +338,4 @@ Si vous utilisez une librairie pour transformer le json en JWT, il génèrera un
 * **USER_INFO :**  Voir la section identité pivot
 * **STATE :** Champ obligatoire, généré aléatoirement par le FS, que FC renvoie tel quel dans la redirection qui suit l'authentification, pour être ensuite vérifié par le FS. Il est utilisé afin d’empêcher l’exploitation de failles CSRF
 * **NONCE :**	Champ obligatoire, généré aléatoirement par le FS que FC renvoie tel quel dans la réponse à l'appel à /token, pour être ensuite vérifié par le FS. Il est utilisé pour empêcher les attaques par rejeu
-* **SUB :** Identifiant technique (unique et stable dans le temps pour un individu donné) fourni par FranceConnect au FS. Le SUB est présent dans l'IdToken retourné au FS ainsi que dans les informations d'identité. Le SUB retourné par FranceConnect est spécifique à chaque fournisseur de service (i.e: Un usager aura toujours le même SUB pour un Fournisseur de Service donné, en revanche il aura un SUB différent par Fournisseur de Service qu'il utilise).
+* **SUB :** Identifiant technique (unique et stable dans le temps pour un individu donné) fourni par FranceConnect+ au FS. Le SUB est présent dans l'IdToken retourné au FS ainsi que dans les informations d'identité. Le SUB retourné par FranceConnect+ est spécifique à chaque fournisseur de service (i.e: Un usager aura toujours le même SUB pour un Fournisseur de Service donné, en revanche il aura un SUB différent par Fournisseur de Service qu'il utilise).
