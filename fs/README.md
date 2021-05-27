@@ -31,6 +31,13 @@ Vous avez lancé un projet pour devenir FranceConnect+ et vous souhaiter connait
 - [Qu'est ce qu'eIDAS et quels sont les niveaux de garantie de FranceConnect+ ?](projet/projet-niveau-eidas.md)
 - [Quel est l'écosystème de FranceConnect+ ?](projet/projet-ecosysteme-fc+.md)
 
+# J'intègre FranceConnect+ dans mon service en ligne
+
+## Je veus savoir comment fonctionne FranceConnect+
+
+- [Qu'est ce que OpenID Connect ?]()
+- [Comment FranceConnect+ utilise OpenID Connect?]()
+
 ## Accès à l'environnement d'intégration FranceConnect+
 
 Pour vous permettre de réaliser les développements liés à l'intégration de FranceConnect, nous mettons à disposition un environnement d'intégration. Les accès à cet environnement se font à travers des clés qui vous sont communiquées sur votre espace partenaire. 
