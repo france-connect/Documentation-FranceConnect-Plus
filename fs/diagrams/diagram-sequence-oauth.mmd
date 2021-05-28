@@ -1,0 +1,15 @@
+```mermaid
+sequenceDiagram
+    autonumber
+    participant RO as Resource Owner 
+    participant C as Client
+    participant AS as Authorization Server
+    participant RS as Resource Server
+
+    C->>RO: Authorization Request
+    RO-->>C: Authorization Grant
+    C->>AS: Authorization Grant
+    AS-->>C: Access Token
+    C->>RS: Access Token
+    RS-->>C: Protected Resource
+```

@@ -13,4 +13,6 @@ La principale différences entre FranceConnect et FranceConnect+ est le niveau d
 [[plus d'infos](https://www.ssi.gouv.fr/administration/reglementation/confiance-numerique/le-reglement-eidas/)]
 
 
-La plateforme FranceConnect  supporte uniquement le niveau de garantie faible. C'est la plateforme FranceConnect+ qui assurent les niveaux de garantie supérieur, c'est à dire les niveaux de garantie Substantiel et Élevé. 
+La plateforme FranceConnect supporte uniquement le niveau de garantie faible. C'est la plateforme FranceConnect+ qui assurent les niveaux de garantie supérieur, c'est à dire les niveaux de garantie Substantiel et Élevé. 
+
+---

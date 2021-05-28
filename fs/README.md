@@ -35,7 +35,7 @@ Vous avez lancé un projet pour devenir FranceConnect+ et vous souhaiter connait
 
 ## Je veus savoir comment fonctionne FranceConnect+
 
-- [Qu'est ce que OpenID Connect ?]()
+- [Qu'est ce que OpenID Connect ?](technique/technique-oidc.md)
 - [Comment FranceConnect+ utilise OpenID Connect?]()
 
 ## Accès à l'environnement d'intégration FranceConnect+
