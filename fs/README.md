@@ -204,7 +204,7 @@ FranceConnect+ a étendu le mécanisme de scopes pour qu'il soit plus modulaire.
 
 **birth :** Regroupe les scopes birthplace et birthcountry. Permet de récupérer la ville et le département de naissance de la personne.
 
-**identite_pivot :** Regroupe les scopes profile et birth. Permet de récupérer l'identité pivot complète plus le nom d'usage si disponible.
+**identite_pivot :** Regroupe les scopes given_name, family_name, birthdate, gender, birthplace, birthcountry. Permet de récupérer l'identité pivot complète.
 
 Cette liste de scopes est définie par la norme OpenIDConnect : http://openid.net/specs/openid-connect-core-1_0.html#ScopeClaims
 
