@@ -100,7 +100,6 @@ Tous les échanges de jetons JWT entre FranceConnect+ et le Fournisseur de Servi
 - Asymétrique : 
 
        - ES256 (EC + SHA256)
-       - RS256 (RSA + SHA256)
 
 **Chiffrement des jetons (jwe+jws)** :
 
