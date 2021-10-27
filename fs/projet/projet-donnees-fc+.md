@@ -2,7 +2,7 @@
 
 ---
 
-# je veux connaitre les données que je peux récupérer de FranceConnect+ 
+# Je veux connaitre les données que je peux récupérer de FranceConnect+ 
 
 Les données usagers sont fournies par les Fournisseurs d'Identité aux Fournisseurs de Service, via FranceConnect+, conformément à l'habilitation obtenue via [datapass.api.gouv.fr](https://datapass.api.gouv.fr), et le choix des données réalisé par le fournisseur de service dans cette demande.
 
@@ -12,8 +12,8 @@ L'identité pivot permet d'identifier un utilisateur particulier.
 * Prénoms
 * Sexe
 * Date de naissance
-* Code géographique INSEE de la ville de naissance
-* Code géographique INSEE du pays de naissance
+* [Code géographique INSEE de la ville de naissance](https://www.insee.fr/fr/information/2560452)
+* [Code géographique INSEE du pays de naissance](https://www.insee.fr/fr/information/2560452)
 
 En complément, il est possible d'obtenir le nom d'usage. Cependant cette donnée n'est pas obligatoirement connue par tous les Fournisseurs d'Identité. Cette donnée ne sera donc pas transmise systématiquement si vous la demandez.
 

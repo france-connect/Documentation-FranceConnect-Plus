@@ -38,43 +38,11 @@ Vous avez lancé un projet pour devenir FranceConnect+ et vous souhaiter connait
 - [Qu'est ce que OpenID Connect ?](technique/technique-oidc.md)
 - [Comment FranceConnect+ utilise OpenID Connect?](technique/technique-oidc-fc.md)
 
-## Accès à l'environnement d'intégration FranceConnect+
+## Je veux savoir comment utiliser FranceConnect+
 
-Pour vous permettre de réaliser les développements liés à l'intégration de FranceConnect, nous mettons à disposition un environnement d'intégration. Les accès à cet environnement se font à travers des clés qui vous sont communiquées sur votre espace partenaire. 
+- [Comment accéder aux différents environnements de FranceConnect+ ?](technique/technique-env-fc.md)
+- [Comment utiliser les scopes OpenID Connect pour accéder aux données des utilisateurs ? ](technique/technique-scope-fc.md)
 
-Sur notre environnement d'intégration, vous pouvez utiliser le fournisseur d'identité "Démonstration" dont les données sont modifiables ici : https://github.com/france-connect/identity-provider-example/blob/master/database.csv
-
-Vous pouvez proposer de nouvelles identités de tests directement sur ce fichier.
-
-Les adresses de notre environnement d'intégration sont les suivantes : 
-
-| EndPoint | Adresse |
-| ------ | ------ |
-| Discovery URL | https://auth.integ01.dev-franceconnect.fr/api/v2/.well-known/openid-configuration | 
-| Authorization | https://auth.integ01.dev-franceconnect.fr/api/v2/authorize |
-| Token | https://auth.integ01.dev-franceconnect.fr/api/v2/token | 
-| UserInfo | https://auth.integ01.dev-franceconnect.fr/api/v2/userinfo | 
-| Logout | https://auth.integ01.dev-franceconnect.fr/api/v2/logout | 
-
-## Mettre en production mon Fournisseur de Service
-
-Pour mettre en production votre Fournisseur de Service, il faut au préalable avoir : 
-
-1. Reçu la qualification de vos développements par FranceConnect+ sur un environnement autre que votre production. 
-2. Demandé une mise en production à travers votre [espace partenaire]((https://partenaires.franceconnect.gouv.fr/login)) 
-3. Utilisé les clés de production qui vous ont été fournies par FranceConnect. 
-
-**Attention :** Il ne faut surtout pas utiliser les clés d'intégration que vous avez utilisées lors de vos développements avec votre Fournisseur de Service en production. Les clés d'intégration ne sont utilisables que sur l'environnement d'intégration FranceConnect.
-
-Les adresses de notre environnement de production sont les suivantes : 
-
-| EndPoint | Adresse |
-| ------ | ------ |
-| Discovery URL | https://auth.franceconnect.gouv.fr/api/v2/.well-known/openid-configuration | 
-| Authorization | https://auth.franceconnect.gouv.fr/api/v2/authorize |
-| Token | https://auth.franceconnect.gouv.fr/api/v2/token | 
-| UserInfo | https://auth.franceconnect.gouv.fr/api/v2/userinfo | 
-| Logout | https://auth.franceconnect.gouv.fr/api/v2/logout | 
 
 
 ## Réaliser des tests avant de soumettre sa demande d'habilitation
@@ -82,71 +50,7 @@ Les adresses de notre environnement de production sont les suivantes :
 Un fournisseur de Service de démonstration est disponible à l'adresse  [fsp1v2.integ01.dev-franceconnect.fr](https://fsp1v2.integ01.dev-franceconnect.fr//). 
 
 
-## Les données usagers
-Les données usagers sont fournies par les Fournisseurs d'Identité aux Fournisseurs de Service, via FranceConnect, conformément à l'habilitation obtenue via [datapass.api.gouv.fr](https://datapass.api.gouv.fr), et le choix des données réalisé par le fournisseur de service dans cette demande.
 
-L'identité pivot permet d'identifier un utilisateur particulier.
-
-* Nom de naissance
-* Prénoms
-* Sexe
-* Date de naissance
-* Code géographique INSEE de la ville de naissance
-* Code géographique INSEE du pays de naissance
-
-En complément, il est possible d'obtenir le nom d'usage. Cependant cette donnée n'est pas obligatoirement connue par tous les Fournisseurs d'Identité.
-
-Vous pouvez avoir accès également à l'adresse email. Cette donnée de contact a également été vérifiée par le Fournisseur d'identité. Il est à remarquer que la donnée "adresse email" peut différer selon le Fournisseur d'Identité choisi par l'usager.
-
-FranceConnect+ transmet systématiquement au Fournisseur de Service un identifiant unique pour chaque utilisateur : 
-
-* Cet identifiant est spécifique à chaque Fournisseur de Service. Un même utilisateur aura donc un identifiant unique différent pour chacun des Fournisseurs de Service auxquels il accède. 
-* Cet identifiant est le même quelque soit le Fournisseur d'Identité qui est utilisé par l'utilisateur. 
-
-A noter que pour les niveaux de garantie d'identité eIDAS 2 et 3 (substantiel et élevé), les données d'identité fournies au fournisseur de service sont celles directement issues du fournisseur d'identité choisi par l'utilisateur, sans redressement RNIPP (INSEE). Ces données peuvent donc légèrement varier d'un fournisseur d'identité à l'autre, nous préconisons donc de réaliser le rapprochement/réconciliation sur la base de l'identifiant unique de l'utilisateur fourni par FranceConnect.
-
-
-### Liste des scopes disponible lors de l'étape d'authentification FranceConnect
-
-FranceConnect+ a étendu le mécanisme de scopes pour qu'il soit plus modulaire.
-
-* Un seul scope est obligatoire : openid. Il permet de récupérer le sub (identifiant unique technique) de l'utilisateur.
-* Il est possible de récupérer individuellement chaque propriété de l'identité pivot en utilisant leurs scopes dédiés.
-* Il est possible de combiner plusieurs scopes de son choix pour récupérer seulement les informations dont a besoin le FS.
-
-
-| Champs       | Type   | Description | Format |
-|--------------|--------|-------------|--------|
-| given_name   | string | les prénoms séparés par des espaces (standard OpenIDConnect) | [A-Za-zÀÂÄÇÉÈÊËÎÏÔÖÙÛÜŸàâäçéèêëîïôöùûüÿÆŒæœ -'] |                                             |
-| family_name  | string | le nom de famille de naissance (standard OpenIDConnect) |  [A-ZÀÂÄÇÉÈÊËÎÏÔÖÙÛÜŸÆŒ \-']|                                                 |
-| birthdate    | string | la date de naissance au format YYYY-MM-DD (standard OpenIDConnect)                                    | [ YYYY-01-01 ] - (\d{4})-01-01 - (Présumé mois) [ YYYY-MM-01 ] - (\d{4})-(\d{2})-01 - (Présumé jours) [ YYYY-MM-DD ] - (\d{4})-(\d{2})-(\d{2}) |
-| gender       | string | male pour les hommes, female pour les femmes (standard OpenIDConnect)| Masculin : M (male) Féminin : F (female) |  
-| birthplace   | string | le code INSEE du lieu de naissance sur 5 chiffres (ou une chaîne vide si la personne est née à l'étranger) | Si né en France (Taille de 5) [(([0-8][0-9AB])|(9[0-8AB]))[0-9]{3}] - [Details] - [Liste] En cas de pays étranger : Champs vide | 
-| birthcountry | string | le code INSEE du pays de naissance sur 5 chiffres    | Pour les pays étrangers (Taille de 5 ) [99[0-9]{3}] - [Details] Pour la France 99100  |
-
-
-
-### Les données complémentaires
-
-| Champs       | Type   | Description | Format |
-|--------------|--------|-------------|--------|
-| sub          | string | identifiant technique (standard OpenIDConnect) | 66 caractères hexa + lettre 'v' |
-| email        | string | l'adresse électronique de contact de la personne (standard OpenIDConnect) | RFC 5322 |
-| preferred_username | string | le nom d'usage (standard OpenIDConnect) | [A-ZÀÂÄÇÉÈÊËÎÏÔÖÙÛÜŸÆŒ \-'] |
-
-
-
-### Les "alias"
-
-**profile :** Regroupe les scopes given_name, family_name, birthdate et gender. Si disponible, renvoie aussi preferred_username
-
-**birth :** Regroupe les scopes birthplace et birthcountry. Permet de récupérer la ville et le département de naissance de la personne.
-
-**identite_pivot :** Regroupe les scopes given_name, family_name, birthdate, gender, birthplace, birthcountry. Permet de récupérer l'identité pivot complète.
-
-Cette liste de scopes est définie par la norme OpenIDConnect : http://openid.net/specs/openid-connect-core-1_0.html#ScopeClaims
-
-# Je veux identifier/authentifier des utilisateurs via FranceConnect
 
 # Intégration d'un bouton FranceConnect+
 
@@ -170,9 +74,6 @@ Téléchargements :
                         
 La récupération de l'identité pivot doit être faite dans la suite immédiate des appels précédents (authentification et récupération du code). Le fait d'appeler ce Web service plus tard n'est aujourd'hui pas proposé.
 
-### Détail des flux
-
-Les flux entre FranceConnect+ et le Fournisseur de Service respectent ce qui est défini dans la norme OpenId Connect. Pour plus de détails, il faut se référer à la [documentation OIDC - https://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth](https://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth)
 
 ## Utiliser les niveaux eIDAS en tant que FS
 

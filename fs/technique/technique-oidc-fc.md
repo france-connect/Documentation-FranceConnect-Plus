@@ -1,4 +1,4 @@
-
+[Documentation Fournisseur de Service](../README.md) > [J'intègre FranceConnect+ dans mon service en ligne](../README.md#jint%C3%A8gre-franceconnect-dans-mon-service-en-ligne) > Comment FranceConnect+ utilise le protocole OpenId Connect ?
 
 ---
 
