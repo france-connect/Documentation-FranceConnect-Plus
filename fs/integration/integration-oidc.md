@@ -2,7 +2,7 @@
 
 ---
 
-# Qu'est ce que le protocole OpenID Connect
+# Qu'est ce que le protocole OpenID Connect ?
 ## Introduction
 
 Le protocole OpenID Connect est au cœur du fonctionnement de FranceConnect+. C'est une couche d'identification basée sur protocole OAuth 2.0. Il permet à des Clients (ici, les Fournisseur de Service) d'accéder à l'identité des Utilisateurs finaux (les internautes) par l'intermédiaire d'un serveur d'autorisation (ici, les Fournisseurs d'Identité).

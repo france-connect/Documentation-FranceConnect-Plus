@@ -36,7 +36,7 @@ Vous avez lancé un projet pour devenir FranceConnect+ et vous souhaiter connait
 ## Je veux savoir comment fonctionne FranceConnect+
 
 - [Qu'est ce que OpenID Connect ?](technique/technique-oidc.md)
-- [Comment FranceConnect+ utilise OpenID Connect?]()
+- [Comment FranceConnect+ utilise OpenID Connect?](technique/technique-oidc-fc.md)
 
 ## Accès à l'environnement d'intégration FranceConnect+
 
@@ -81,68 +81,6 @@ Les adresses de notre environnement de production sont les suivantes :
 
 Un fournisseur de Service de démonstration est disponible à l'adresse  [fsp1v2.integ01.dev-franceconnect.fr](https://fsp1v2.integ01.dev-franceconnect.fr//). 
 
-# Concepts de base
-## Le protocole OpenID Connect
-### Introduction
-
-Le protocole OpenID Connect est au cœur du fonctionnement de FranceConnect. C'est une couche d'identification basée sur protocole OAuth 2.0. Il permet à des Clients (ici, les Fournisseur de Service) d'accéder à l'identité des Utilisateurs finaux (les internautes) par l'intermédiaire d'un serveur d'autorisation (ici, les Fournisseurs d'Identité).
-
-La spécification du protocole se trouve sur http://openid.net/connect/.
-
-Pour une référence d'implémentation OpenID Connect voici le lien : https://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth
-
-### Les flux standards
-
-Le protocole OpenID Connect définit 3 appels REST faits par le client, et 4 endpoints (un du côté client, et trois du côté provider).
-
-En amont, le client s'inscrit (en général manuellement) auprès du provider. Il lui fournit une URL de callback (l'URL du client vers lequel l'internaute est redirigé une fois authentifié), aussi appelée "callback endpoint". En retour le provider donne au client un client ID et un client secret.
-
-Lorsque l'internaute clique sur le bouton d'authentification du client, le flux est le suivant :
-
-1. Le client fait une redirection vers le "authorization endpoint" du provider avec son client id et son url de callback. Le provider redirige alors l'internaute vers sa mire d'authentification. Si l'internaute se loggue correctement, le provider renvoie un code d'autorisation au client.
-2. Le client fait un appel Web service vers le "token endpoint" du provider avec le code d'autorisation reçu, et authentifie cette requête avec son client id et son client secret. Le provider retourne un access token (une chaîne de caractères encodée en base64), un id token (sous la forme d'un Json Web Token), et parfois un refresh token (une chaîne de caractères en base64).
-3. Le client fait un appel Web service vers le "userInfo endpoint" du provider avec l'access token reçu, et le provider renvoie les informations de l'internaute au client.
-
-### Dans le cadre de FranceConnect
-
-L'enregistrement des Fournisseurs de Service auprès de FranceConnect+ s'effectue en déposant une demande sur le site [datapass.api.gouv.fr](https://datapass.api.gouv.fr/)
-
-FranceConnect+ implémente le flux [Authorization Code Flow](https://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth) d'OpenID Connect. 
-
-Les fournisseurs de service doivent être clients OpenID Connect, et les fournisseurs d'identité doivent être fournisseurs OpenID Connect. FranceConnect+ est une brique intermédiaire qui est à la fois fournisseur (du point de vue des FS) et client (du point de vue des FI).
-
-### Chiffrement et signature des échanges
-
-Tous les échanges de jetons JWT entre FranceConnect+ et le Fournisseur de Service sont signés et chiffrés en utilisant les algorithmes suivants :
-
-**Signature de jetons par le FI** :
-
-- Asymétrique : 
-
-       - ES256 (EC + SHA256)
-       - RS256 (RSA + SHA256)
-
-**Chiffrement des jetons (jwe+jws)** :
-
-- Hybride :
-
-      - RSA-OEAP + AES256-GCM 
-      - ECDH-ES + AES256-GCM
-
-Les spécifications des algorithmes de signatures et de chiffrements utilisés sont les suivantes :
-
-* [JWA - https://tools.ietf.org/html/rfc7518](https://tools.ietf.org/html/rfc7518)
-* [JWS - https://tools.ietf.org/html/rfc7515#appendix-A.3](https://tools.ietf.org/html/rfc7515#appendix-A.3)
-* [JWE - https://tools.ietf.org/html/rfc7516#appendix-A.1](https://tools.ietf.org/html/rfc7516#appendix-A.1)
-
-Les clés publiques de signatures de FranceConnect+ sont disponibles via la *JWKS URL* présente dans les méta-data de la *Discovery URL* à l'adresse suivantes et sont changées régulièrement :
-
-| Environnement | adresses du endpoint |
-| ------ | ------ |
-| intégration FC | https://auth.integ01.dev-franceconnect.fr/api/v2/jwks |
-| production FC | https://auth.franceconnect.gouv.fr/api/v2/jwks |  
-
-les clés de signatures utilisés par le Fournisseur d'Identité doivent être disponible via la *JWKS URL* présente dans les méta-data de la *Discovery URL* . 
 
 ## Les données usagers
 Les données usagers sont fournies par les Fournisseurs d'Identité aux Fournisseurs de Service, via FranceConnect, conformément à l'habilitation obtenue via [datapass.api.gouv.fr](https://datapass.api.gouv.fr), et le choix des données réalisé par le fournisseur de service dans cette demande.
