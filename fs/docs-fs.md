@@ -161,7 +161,7 @@ FranceConnect+ a étendu le mécanisme de scopes pour qu'il soit plus modulaire.
 | given_name   | string | les prénoms séparés par des espaces (standard OpenIDConnect) | [A-Za-zÀÂÄÇÉÈÊËÎÏÔÖÙÛÜŸàâäçéèêëîïôöùûüÿÆŒæœ -'] |                                             |
 | family_name  | string | le nom de famille de naissance (standard OpenIDConnect) |  [A-ZÀÂÄÇÉÈÊËÎÏÔÖÙÛÜŸÆŒ \-']|                                                 |
 | birthdate    | string | la date de naissance au format YYYY-MM-DD (standard OpenIDConnect)                                    | [ YYYY-01-01 ] - (\d{4})-01-01 - (Présumé mois) [ YYYY-MM-01 ] - (\d{4})-(\d{2})-01 - (Présumé jours) [ YYYY-MM-DD ] - (\d{4})-(\d{2})-(\d{2}) |
-| gender       | string | male pour les hommes, female pour les femmes (standard OpenIDConnect)| Masculin : M (male) Féminin : F (female) |  
+| gender       | string | male pour les hommes, female pour les femmes (standard OpenIDConnect)| Masculin : male ; Féminin : female |  
 | birthplace   | string | le code INSEE du lieu de naissance sur 5 chiffres (ou une chaîne vide si la personne est née à l'étranger) | Si né en France (Taille de 5) [(([0-8][0-9AB])|(9[0-8AB]))[0-9]{3}] - [Details] - [Liste] En cas de pays étranger : Champs vide | 
 | birthcountry | string | le code INSEE du pays de naissance sur 5 chiffres    | Pour les pays étrangers (Taille de 5 ) [99[0-9]{3}] - [Details] Pour la France 99100  |
 
@@ -226,7 +226,7 @@ Au sujet du claim acr_values, on notera que c'est, selon la norme, un "voluntary
 Exemple d'appel précisant un niveau eIDAS minimum :
 
 ```
-https://fcp.integ01.dev-franceconnect.fr/api/v2/authorize?response_type=code&client_id=123456&redirect_uri=https%3A%2F%2Ffournisseur-de-service.dev-franceconnect.fr%2Flogin-callback&scope=openid%20profile%20email%20address%20phone%20preferred_username%20email%20address%20phone%20preferred_username&acr_values=eidas1&state=randomValue&nonce=randomValue
+https://fcp.integ01.dev-franceconnect.fr/api/v2/authorize?response_type=code&client_id=123456&redirect_uri=https%3A%2F%2Ffournisseur-de-service.dev-franceconnect.fr%2Flogin-callback&scope=openid%20profile%20email%20preferred_username%20email%20preferred_username&acr_values=eidas1&state=randomValue&nonce=randomValue
 ```
 
 Afin d'y arriver, il faut spécifier une ou plusieurs valeurs parmi les suivantes :
