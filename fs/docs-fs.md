@@ -226,7 +226,7 @@ Au sujet du claim acr_values, on notera que c'est, selon la norme, un "voluntary
 Exemple d'appel précisant un niveau eIDAS minimum :
 
 ```
-https://fcp.integ01.dev-franceconnect.fr/api/v2/authorize?response_type=code&client_id=123456&redirect_uri=https%3A%2F%2Ffournisseur-de-service.dev-franceconnect.fr%2Flogin-callback&scope=openid%20profile%20email%20address%20phone%20preferred_username%20email%20address%20phone%20preferred_username&acr_values=eidas1&state=randomValue&nonce=randomValue
+https://fcp.integ01.dev-franceconnect.fr/api/v2/authorize?response_type=code&client_id=123456&redirect_uri=https%3A%2F%2Ffournisseur-de-service.dev-franceconnect.fr%2Flogin-callback&scope=openid%20profile%20email%20preferred_username%20email%20preferred_username&acr_values=eidas1&state=randomValue&nonce=randomValue
 ```
 
 Afin d'y arriver, il faut spécifier une ou plusieurs valeurs parmi les suivantes :
