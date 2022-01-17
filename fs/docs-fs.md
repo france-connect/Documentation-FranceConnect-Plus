@@ -95,13 +95,13 @@ Les fournisseurs de service doivent être clients OpenID Connect, et les fournis
 
 Tous les échanges de jetons JWT entre FranceConnect+ et le Fournisseur de Service sont signés et chiffrés en utilisant les algorithmes suivants :
 
-**Signature de jetons par le FI** :
+**Signature de jetons par le FranceConnect+** :
 
 - Asymétrique : 
 
        - ES256 (EC + SHA256)
 
-**Chiffrement des jetons (jwe+jws)** :
+**Chiffrement des jetons (jwe+jws) par FranceConnect+** :
 
 - Hybride :
 
