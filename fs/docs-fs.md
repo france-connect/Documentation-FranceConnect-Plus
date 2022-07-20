@@ -12,7 +12,7 @@ FranceConnect+ s'implémente sur une plateforme distincte de la plateforme dite 
 
 2. Vous soumettez une demande d'habilitation  via [datapass.api.gouv.fr](https://datapass.api.gouv.fr/) et vous transmettez toutes les informations nécessaires à la validation de votre demande (respect du RGPD, contact du responsable technique, niveau de garantie eIDAS souhaité, données d'identité recueillies, etc). Votre demande est validée par le service juridique de la DINUM dans un délai moyen de 5 jours ouvrés.
 
-3. Si votre demande est acceptée, votre responsable technique reçoit un mail lui donnant accès à l'[espace partenaire](https://partenaires.franceconnect.gouv.fr/login). Cet espace vous permettra d'accéder aux ressources de développement et de test.
+3. Si votre demande est acceptée, vous devez faire une demande pour pouvoir accéder à l'environnement d'intégration FranceConnect+. Celui-ci vous permettra de réaliser vos développements. Pour faire votre demande, il est nécessaire d'utiliser la démarche en ligne suivante : https://www.demarches-simplifiees.fr/commencer/demande-de-creation-d-un-fs-fc-plus.
 
 4. Vous présentez vos développements pour une qualification par l'équipe FranceConnect+. La durée de cette phase de qualification dépend du [respect des prérequis ](https://partenaires.franceconnect.gouv.fr/monprojet/recetter/)(techniques, sécurité, fonctionnels, UX...). N'hésitez pas à soumettre vos maquettes de parcours en amont pour une pré-qualification fonctionnelle et UX anticipée.
 
