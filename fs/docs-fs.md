@@ -179,9 +179,9 @@ FranceConnect+ a étendu le mécanisme de scopes pour qu'il soit plus modulaire.
 
 ### Les "alias"
 
-**profile :** Regroupe les scopes given_name, family_name,preferred_username, birthdate et gender. Si disponible, renvoie aussi preferred_username
+**profile :** Regroupe les scopes given_name, family_name, preferred_username, birthdate et gender. Si disponible, renvoie aussi preferred_username
 
-**birth :** Regroupe les scopes birthplace et birthcountry. Permet de récupérer la ville et le département de naissance de la personne.
+**birth :** Regroupe les scopes birthplace et birthcountry. Permet de récupérer la ville et le pays de naissance de la personne.
 
 **identite_pivot :** Regroupe les scopes given_name, family_name, birthdate, gender, birthplace, birthcountry. Permet de récupérer l'identité pivot complète.
 
