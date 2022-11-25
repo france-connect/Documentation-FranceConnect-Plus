@@ -165,8 +165,6 @@ FranceConnect+ a étendu le mécanisme de scopes pour qu'il soit plus modulaire.
 | birthplace   | string | le code INSEE du lieu de naissance sur 5 chiffres (ou une chaîne vide si la personne est née à l'étranger) | Si né en France (Taille de 5) [(([0-8][0-9AB])|(9[0-8AB]))[0-9]{3}] - [Details] - [Liste] En cas de pays étranger : Champs vide | 
 | birthcountry | string | le code INSEE du pays de naissance sur 5 chiffres    | Pour les pays étrangers (Taille de 5 ) [99[0-9]{3}] - [Details] Pour la France 99100  |
 
-
-
 ### Les données complémentaires
 
 | Champs       | Type   | Description | Format |
@@ -174,8 +172,6 @@ FranceConnect+ a étendu le mécanisme de scopes pour qu'il soit plus modulaire.
 | sub          | string | identifiant technique (standard OpenIDConnect) | 66 caractères hexa + lettre 'v' |
 | email        | string | l'adresse électronique de contact de la personne (standard OpenIDConnect) | RFC 5322 |
 | preferred_username | string | le nom d'usage (standard OpenIDConnect) | [A-ZÀÂÄÇÉÈÊËÎÏÔÖÙÛÜŸÆŒ \-'] |
-
-
 
 ### Les "alias"
 
@@ -186,6 +182,36 @@ FranceConnect+ a étendu le mécanisme de scopes pour qu'il soit plus modulaire.
 **identite_pivot :** Regroupe les scopes given_name, family_name, birthdate, gender, birthplace, birthcountry. Permet de récupérer l'identité pivot complète.
 
 Cette liste de scopes est définie par la norme OpenIDConnect : http://openid.net/specs/openid-connect-core-1_0.html#ScopeClaims
+
+
+### Les données provenant du RNIPP
+
+Il est possible également de récupérer pour chacune des données d'identités, de récupérer la même donnée provenant du RNIPP. Ces données doivent être uniquement utilisées pour faciliter le rapprochement en l'identité provenant de FranceConnect+ avec celle dans le référentiel du fournisseur de service. Ces données ne présentent pas le même niveau de garantie que les données d'identités. Elles doivent donc être utilisé uniquement pour facilité la réconciliation. Les données provenant du fournisseurs d'identités sont les seules ayant le niveau de garantie demandé ( subtantiel ou élevé ). 
+
+Des scopes spécifiques permettant de récupérer à la fois les données provenant du RNIPP et du fournisseurs d'identités ont été ajoutés. 
+
+| scope | claims associés |
+| ------ | ------ |
+| rnipp_given_name | given_name, rnipp_given_name |
+| rnipp_family_name | family_name, rnipp_family_name |
+| rnipp_gender | gender, rnipp_gender |
+| rnipp_birthcountry | birthcountry, rnipp_birthcountry |
+| rnipp_birthplace | birthplace, rnipp_birthplace |
+| rnipp_birthdate | birthdate, rnipp_birthdate |
+| rnipp_profile | given_name, family_name, birthdate, gender,preferred_username,rnipp_given_name, rnipp_family_name, rnipp_birthdate, rnipp_gender |
+| rnipp_birth | birthplace, birthcountry, rnipp_birthplace, rnipp_birthcountry |
+| rnipp_identite_pivot | given_name, family_name, birthdate, gender, birthplace, birthcountry, rnipp_given_name, rnipp_family_name, rnipp_birthdate, rnipp_gender, rnipp_birthplace, rnipp_birthcountry|
+
+Des claims supplémentaires contiennent les données provenant du RNIPP
+
+| Champs       | Type   | Description | Format |
+|--------------|--------|-------------|--------|
+| rnipp_given_name   | string | les prénoms séparés par des espaces (standard OpenIDConnect) | [A-Za-zÀÂÄÇÉÈÊËÎÏÔÖÙÛÜŸàâäçéèêëîïôöùûüÿÆŒæœ -'] |                                             |
+| rnipp_family_name  | string | le nom de famille de naissance (standard OpenIDConnect) |  [A-ZÀÂÄÇÉÈÊËÎÏÔÖÙÛÜŸÆŒ \-']|                                                 |
+| rnipp_birthdate    | string | la date de naissance au format YYYY-MM-DD (standard OpenIDConnect)                                    | [ YYYY-01-01 ] - (\d{4})-01-01 - (Présumé mois) [ YYYY-MM-01 ] - (\d{4})-(\d{2})-01 - (Présumé jours) [ YYYY-MM-DD ] - (\d{4})-(\d{2})-(\d{2}) |
+| rnipp_gender       | string | male pour les hommes, female pour les femmes (standard OpenIDConnect)| Masculin : male ; Féminin : female |  
+| rnipp_birthplace   | string | le code INSEE du lieu de naissance sur 5 chiffres (ou une chaîne vide si la personne est née à l'étranger) | Si né en France (Taille de 5) [(([0-8][0-9AB])|(9[0-8AB]))[0-9]{3}] - [Details] - [Liste] En cas de pays étranger : Champs vide | 
+| rnipp_birthcountry | string | le code INSEE du pays de naissance sur 5 chiffres    | Pour les pays étrangers (Taille de 5 ) [99[0-9]{3}] - [Details] Pour la France 99100  |
 
 # Je veux identifier/authentifier des utilisateurs via FranceConnect
 
