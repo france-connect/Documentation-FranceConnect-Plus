@@ -40,7 +40,7 @@ Le protocole OpenId Connect defini un certain nombre de [claims standards](https
 
 #### Les données d'identité
 
-| Champs       | Type   | Description | Format |
+| Claims       | Type   | Description | Format |
 |--------------|--------|-------------|--------|
 | given_name   | string | les prénoms séparés par des espaces (standard OpenIDConnect) | [A-Za-zÀÂÄÇÉÈÊËÎÏÔÖÙÛÜŸàâäçéèêëîïôöùûüÿÆŒæœ -'] |                                             |
 | family_name  | string | le nom de famille de naissance (standard OpenIDConnect) |  [A-ZÀÂÄÇÉÈÊËÎÏÔÖÙÛÜŸÆŒ \-']|                                                 |
@@ -52,11 +52,26 @@ Le protocole OpenId Connect defini un certain nombre de [claims standards](https
 
 ### Les données complémentaires
 
-| Champs       | Type   | Description | Format |
+| Claims       | Type   | Description | Format |
 |--------------|--------|-------------|--------|
 | sub          | string | identifiant technique (standard OpenIDConnect) | 66 caractères hexa + lettre 'v' |
 | email        | string | l'adresse électronique de contact de la personne (standard OpenIDConnect) | [RFC 5322](https://xml2rfc.tools.ietf.org/public/rfc/html/rfc5322.html#addrspec) |
 | preferred_username | string | le nom d'usage (standard OpenIDConnect) | [A-ZÀÂÄÇÉÈÊËÎÏÔÖÙÛÜŸÆŒ \-'] |
+
+### Les données provenant du RNIPP
+
+L'ensemble des données, hormis le sub, ci-dessus proviennent du fournisseur d'identité et ont le niveau de garantie correspondant ( substantiel ou élevé suivant le fournisseur d'identité ). Afin de faciliter la réconciliation entre les données d'identités mis à disposition par FranceConnect+ et les référentiels de certains FI ( fournisseurs de service publique exclusivement ), des données provenant du RNIPP peuvent également être mise à disposition en fonction du besoin. Attention, le RNIPP ne disposant pas de qualification en tant que MIE, les données provenant du RNIPP n'ont pas de garantie de niveau substantiel ou élevé. Il est donc nécessaire d'utiliser ces données afin de faciliter les réconciliations et uniquement cela. Les données provenant du fournisseurs d'identités doivent être utiliser pour garantir l'identité de l'usager. 
+
+
+| Claims       | Type   | Description | Format |
+|--------------|--------|-------------|--------|
+| rnipp_given_name   | string | les prénoms séparés par des espaces (standard OpenIDConnect) | [A-Za-zÀÂÄÇÉÈÊËÎÏÔÖÙÛÜŸàâäçéèêëîïôöùûüÿÆŒæœ -'] |                                             |
+| rnipp_family_name  | string | le nom de famille de naissance (standard OpenIDConnect) |  [A-ZÀÂÄÇÉÈÊËÎÏÔÖÙÛÜŸÆŒ \-']|                                                 |
+| rnipp_birthdate    | string | la date de naissance au format YYYY-MM-DD (standard OpenIDConnect)                                    | [ YYYY-01-01 ] - (\d{4})-01-01 - (Présumé mois) [ YYYY-MM-01 ] - (\d{4})-(\d{2})-01 - (Présumé jours) [ YYYY-MM-DD ] - (\d{4})-(\d{2})-(\d{2}) |
+| rnipp_gender       | string | male pour les hommes, female pour les femmes (standard OpenIDConnect)| Masculin : male Féminin : female |  
+| rnipp_birthplace   | string | le code INSEE du lieu de naissance sur 5 chiffres (ou une chaîne vide si la personne est née à l'étranger). Une lettre peut être présente pour les personnes nées en corse.| Si né en France (Taille de 5) [(([0-8][0-9AB])|(9[0-8AB]))[0-9]{3}] - [Details](http://xml.insee.fr/schema/cog.html#CodeCommuneFrancaiseOuPaysOuTerritoireEtranger_stype) - [Liste](https://www.insee.fr/fr/information/3363419) <br/>En cas de pays étranger : Champs vide | 
+| rnipp_birthcountry | string | le code INSEE du pays de naissance sur 5 chiffres    | Pour les pays étrangers (Taille de 5 ) [99[0-9]{3}] - [Details](http://xml.insee.fr/schema/cog.html#CodePaysOuTerritoireEtranger_stype) Pour la France 99100  |
+
 
 ### Les données sur l'authentification
 
@@ -88,3 +103,12 @@ Le tableau suivant décris la liste des *claims* accessible en fonction des *sco
 | profile | family_name, given_name, preferred_username, gender, birthdate |
 | birth | birthplace, birthcountry |
 | identite_pivot |given_name, family_name, birthdate, gender, birthplace, birthcountry  |
+| rnipp_given_name | given_name, rnipp_given_name |
+| rnipp_family_name | family_name, rnipp_family_name |
+| rnipp_gender | gender, rnipp_gender |
+| rnipp_birthcountry | birthcountry, rnipp_birthcountry |
+| rnipp_birthplace | birthplace, rnipp_birthplace |
+| rnipp_birthdate | birthdate, rnipp_birthdate |
+| rnipp_profile | given_name, family_name, birthdate, gender,preferred_username,rnipp_given_name, rnipp_family_name, rnipp_birthdate, rnipp_gender |
+| rnipp_birth | birthplace, birthcountry, rnipp_birthplace, rnipp_birthcountry |
+| rnipp_identite_pivot | given_name, family_name, birthdate, gender, birthplace, birthcountry, rnipp_given_name, rnipp_family_name, rnipp_birthdate, rnipp_gender, rnipp_birthplace, rnipp_birthcountry|
