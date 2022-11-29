@@ -29,7 +29,7 @@ Les adresses de notre environnement d'intégration sont les suivantes :
 | Authorization | https://auth.integ01.dev-franceconnect.fr/api/v2/authorize |
 | Token | https://auth.integ01.dev-franceconnect.fr/api/v2/token | 
 | UserInfo | https://auth.integ01.dev-franceconnect.fr/api/v2/userinfo | 
-| Logout | https://auth.integ01.dev-franceconnect.fr/api/v2/logout | 
+| Logout | https://auth.integ01.dev-franceconnect.fr/api/v2/session/end | 
 
 ## Accès à l'environnement de production FranceConnect+
 
@@ -50,4 +50,4 @@ Les adresses de notre environnement de production sont les suivantes :
 | Authorization | https://auth.franceconnect.gouv.fr/api/v2/authorize |
 | Token | https://auth.franceconnect.gouv.fr/api/v2/token | 
 | UserInfo | https://auth.franceconnect.gouv.fr/api/v2/userinfo | 
-| Logout | https://auth.franceconnect.gouv.fr/api/v2/logout | 
+| Logout | https://auth.franceconnect.gouv.fr/api/v2/session/end | 
