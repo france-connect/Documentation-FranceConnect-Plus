@@ -16,7 +16,7 @@ FranceConnect+ s'implémente sur une plateforme distincte de la plateforme dite 
 
 4. Vous présentez vos développements pour une qualification par l'équipe FranceConnect+. La durée de cette phase de qualification dépend du [respect des prérequis ](https://partenaires.franceconnect.gouv.fr/monprojet/recetter/)(techniques, sécurité, fonctionnels, UX...). N'hésitez pas à soumettre vos maquettes de parcours en amont pour une pré-qualification fonctionnelle et UX anticipée.
 
-5. Si votre implémentation est validée par notre équipe, vous recevez vos secrets pour passer en production. Pour cela, il est nécessaire d'utiliser la démarche en ligne suivante pour les demander : https://www.demarches-simplifiees.fr/commencer/demande-de-creation-fs-fcplus-production
+5. Si votre implémentation est validée par notre équipe, vous recevez vos secrets pour passer en production. Pour cela, il est nécessaire d'utiliser la démarche en ligne suivante pour les demander : https://www.demarches-simplifiees.fr/commencer/demande-de-creation-d-un-fs-fc-plus
 
 ## Accès à l'environnement d'intégration FranceConnect+
 
