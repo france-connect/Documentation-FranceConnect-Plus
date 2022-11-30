@@ -44,6 +44,10 @@ Vous avez lancé un projet pour devenir FranceConnect+ et vous souhaiter connait
 - [Comment utiliser les scopes OpenID Connect pour accéder aux données des utilisateurs ? ](technique/technique-scope-fc.md)
 
 
+## Je veux connaitre les règles d'intégration du bouton dans mon service
+
+- [Quel visuel utiliser pour les boutons FranceConnect?](technique/technique-boutons-fc.md)
+
 
 ## Réaliser des tests avant de soumettre sa demande d'habilitation
 
@@ -52,17 +56,7 @@ Un fournisseur de Service de démonstration est disponible à l'adresse  [fsp1v2
 
 
 
-# Intégration d'un bouton FranceConnect+
 
-Les boutons d’action FranceConnect+ sont primordiaux dans l’usage du service. Il est obligatoire d’utiliser l’un des boutons proposé et aucun autre visuel pour la connexion des usagers.
-
-Pour les boutons en svg, lors de l'utilisation d'une image veuillez préciser la taille du bouton.
-
-Téléchargements :
-
-* Pack SVG
-* Pack PNG
-* Pack JPG
 
 
 
