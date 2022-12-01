@@ -1,4 +1,4 @@
-# Comment intégrer le boutons FranceConnect+ à mon service ?
+# Comment intégrer le bouton FranceConnect+ à mon service ?
 
 En fonction du type de service, il existe deux intégration possible du bouton FranceConnect+ :  
 

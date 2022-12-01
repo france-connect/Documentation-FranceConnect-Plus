@@ -10,3 +10,4 @@ Contrairement à la plateforme FranceConnect, il est nécessaire d'avoir sa dema
 Voir aussi : 
 
 - [Quelles sont les étapes pour devenir Fournisseur de Service ? ](../pilotage/pilotage-etapes.md)
+- [Comment effectuer ma demande d'habilitation pour FranceConnect+ ?](./projet-datapass.md)

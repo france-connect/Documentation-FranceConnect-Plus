@@ -32,6 +32,7 @@ Vous avez lancé un projet pour devenir FranceConnect+ et vous souhaiter connait
 - [Qu'est ce qu'eIDAS et quels sont les niveaux de garantie de FranceConnect+ ?](projet/projet-niveau-eidas.md)
 - [Quel est l'écosystème de FranceConnect+ ?](projet/projet-ecosysteme-fc+.md)
 - [Comment puis-je réaliser des tests de FranceConnect+ avant de soumettre ma demande d'habilitation ?](projet-tests-sans-datapass.md)
+- [Comment effectuer ma demande d'habilitation pour FranceConnect+ ?](../projet/projet-datapass.md)
 
 # J'intègre FranceConnect+ dans mon service en ligne
 
@@ -49,7 +50,7 @@ Vous avez lancé un projet pour devenir FranceConnect+ et vous souhaiter connait
 
 ## Je veux connaitre les règles d'intégration du bouton dans mon service
 
-- [Comment intégrer le boutons FranceConnect+ à mon service ?](technique/technique-boutons-fc.md)
+- [Comment intégrer le bouton FranceConnect+ à mon service ?](technique/technique-boutons-fc.md)
 
 
 # Je veux déconnecter l'utilisateur de FranceConnect

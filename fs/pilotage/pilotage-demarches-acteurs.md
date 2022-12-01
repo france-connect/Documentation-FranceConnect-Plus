@@ -2,7 +2,7 @@
 
 ---
 
-# Quels sont les acteurs à impliquer dans l'intégration de FranceConnect+
+# Quels sont les acteurs à impliquer dans l'intégration de FranceConnect+ ?
 
 Pour devenir Fournisseur de Service de FranceConnect+, il est nécessaire de designé des personnes remplissants les rôles suivants : Responsable de traitement, Délégué à la protection des données, Responsable technique, Responsable de la Sécurité du Système d'Information. 
 
