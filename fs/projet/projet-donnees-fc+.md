@@ -1,8 +1,8 @@
-[Documentation Fournisseur de Service](../README.md) > [Gerer un projet d'integration FranceConnect+](../README.md#je-veux-devenir-fournisseur-de-service) > Données accessible via FranceConnect+
+[Documentation Fournisseur de Service](../README.md) > [Gerer un projet d'integration FranceConnect+](../README.md#je-veux-devenir-fournisseur-de-service) > Quelles sont les données que je peux récupérer par FranceConnect+ sur mes usagers ?
 
 ---
 
-# Je veux connaitre les données que je peux récupérer de FranceConnect+ 
+# Quelles sont les données que je peux récupérer par FranceConnect+ sur mes usagers ?
 
 Les données usagers sont fournies par les Fournisseurs d'Identité aux Fournisseurs de Service, via FranceConnect+, conformément à l'habilitation obtenue via [datapass.api.gouv.fr](https://datapass.api.gouv.fr), et le choix des données réalisé par le fournisseur de service dans cette demande.
 

@@ -1,3 +1,7 @@
+[Documentation Fournisseur](../README.md) > [J'intègre FranceConnect+ dans mon service en ligne](../README.md#jintègre-franceconnect-dans-mon-service-en-ligne) > Comment intégrer le bouton FranceConnect+ à mon service ?
+
+---
+
 # Comment intégrer le bouton FranceConnect+ à mon service ?
 
 En fonction du type de service, il existe deux intégration possible du bouton FranceConnect+ :  

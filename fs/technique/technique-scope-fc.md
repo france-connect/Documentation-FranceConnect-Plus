@@ -1,4 +1,4 @@
-
+[Documentation Fournisseur](../README.md) > [J'intègre FranceConnect+ dans mon service en ligne](../README.md#jintègre-franceconnect-dans-mon-service-en-ligne) > Comment utiliser les scopes OpenID Connect pour accéder aux données des utilisateurs ? 
 
 ---
 
@@ -112,3 +112,11 @@ Le tableau suivant décris la liste des *claims* accessible en fonction des *sco
 | rnipp_profile | given_name, family_name, birthdate, gender,preferred_username,rnipp_given_name, rnipp_family_name, rnipp_birthdate, rnipp_gender |
 | rnipp_birth | birthplace, birthcountry, rnipp_birthplace, rnipp_birthcountry |
 | rnipp_identite_pivot | given_name, family_name, birthdate, gender, birthplace, birthcountry, rnipp_given_name, rnipp_family_name, rnipp_birthdate, rnipp_gender, rnipp_birthplace, rnipp_birthcountry|
+
+---
+
+Voir aussi: 
+
+- [Quelles sont les données que je peux récupérer par FranceConnect+ sur mes usagers ?](../projet/projet-donnees-fc%2B.md)
+- [Comment FranceConnect+ utilise le protocole OpenId Connect ?](technique-oidc-fc.md)
+- [Qu'est ce que le protocole OpenID Connect ?](technique-oidc.md)

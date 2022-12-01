@@ -1,9 +1,10 @@
+[Documentation Fournisseur](../README.md) > [J'intègre FranceConnect+ dans mon service en ligne](../README.md#jintègre-franceconnect-dans-mon-service-en-ligne) > Comment utiliser les niveaux de garantie eIDAS sur FranceConnect+ ?
 
 ---
 
 # Comment utiliser les niveaux de garantie eIDAS sur FranceConnect+ ?
 
-## Les niveaux eIDAS disponible sur la plateforme FranceConnect+
+## Les niveaux eIDAS disponible sur la plateforme FranceConnect+
 
 La plaforme FranceConnect+ est qualifié pour fournir des identités de niveau de garantie eIDAS substantiel et élevé. Le niveau de garantie faible n'est pas supporté. Si vous souhaitez obtenir des identités ayant un niveau de garantie faible, vous devez pour cela utiliser la plateforme FranceConnect. 
 

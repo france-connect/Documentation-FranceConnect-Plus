@@ -1,4 +1,4 @@
-[Documentation Fournisseur de Service](../README.md) > [J'intègre FranceConnect+ dans mon service en ligne](../README.md#jint%C3%A8gre-franceconnect-dans-mon-service-en-ligne) > Comment FranceConnect+ utilise le protocole OpenId Connect ?
+[Documentation Fournisseur](../README.md) > [J'intègre FranceConnect+ dans mon service en ligne](../README.md#jintègre-franceconnect-dans-mon-service-en-ligne) > Comment FranceConnect+ utilise le protocole OpenId Connect ?
 
 ---
 
@@ -24,7 +24,7 @@ Le protocole OpenID Connect propose différents *flow* permettant de récupérer
 
 ## Discovery Mode
 
-Le protocole OpenId Connect permet à *l'Identity Provider* d'exposer à *Relying Party* de récupérer dynamiquement ses données de configuration (*meta-data*). 
+Le protocole OpenID Connect permet à *l'Identity Provider* d'exposer à *Relying Party* de récupérer dynamiquement ses données de configuration (*meta-data*). 
 
 [Plus d'information sur OpenID Connect Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html)
 

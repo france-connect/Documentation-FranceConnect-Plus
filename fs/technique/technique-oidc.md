@@ -1,3 +1,7 @@
+[Documentation Fournisseur](../README.md) > [J'intègre FranceConnect+ dans mon service en ligne](../README.md#jintègre-franceconnect-dans-mon-service-en-ligne) > Qu'est ce que le protocole OpenID Connect ?
+
+---
+
 # Qu'est ce que le protocole OpenID Connect ?
 
 
@@ -50,9 +54,9 @@ OAuth 2.0 propose les types d'autorisations suivants: authorization code, implic
 
 Il faut noter que le protocole OAuth 2.O ne gère pas l'authentification de l'utilisateur. L'identité de l'utilisateur ne permet pas au client d'accéder au informations d'identités de l'utilisateur. Afin de rajouter ces informations, le protocole Openid Connect étant OAuth 2.0 pour intégrer l'accès aux informations d'identités de l'utilisateur. 
 
-## Qu'apporte OpenId Connect à OAuth 2.0 ? 
+## Qu'apporte OpenID Connect à OAuth 2.0 ? 
 
-Le protocole OpenId Connect s'appuie sur OAuth 2.0 en ajoutant des fonctionnalités supplémentaires : 
+Le protocole OpenID Connect s'appuie sur OAuth 2.0 en ajoutant des fonctionnalités supplémentaires : 
 
 - La gestion d'information sur l'authentification
 - l'ajout d'un ID Token 
@@ -119,5 +123,14 @@ OpenId proposte 3 types de flow qui permettent de récupérer des tokens :
 - **Authorization code flow** : l'appel au endpoint *authorization* permet de récupérer un code d'autorisation qui est utilisé pour récupérer les tokens. 
 - **Implicit flow** : l'appel au endpoint *authorization* permet de récupérer directement les tokens, le refresh token ne peut pas être récupéré.
 - **Hybrid flow** : Il s'agit d'un mix entre les deux. 
+
+--- 
+
+Voir aussi : 
+
+- [Comment FranceConnect+ utilise le protocole OpenId Connect ?](./technique-oidc-fc.md)
+- [Quels échanges ont lieu entre mon service et FranceConnect+ lors d'une cinématique ?](./technique-oidc-flux.md)
+
+
 
 
