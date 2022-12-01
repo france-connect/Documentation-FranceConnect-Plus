@@ -12,8 +12,8 @@ L'intégration de FranceConnect+ en tant que Fournisseur de Service est légère
     - des URLs différentes pour accéder aux environnements; 
     - des secrets différents pour chacun des environnements (intégration, production)
 - un chiffrement et un signature sur les jetons transmis
-- une utilisation de mode discovery d'OpenId Connect
+- une utilisation de mode discovery d'OpenID Connect
 - une exposition des clés publiques de chiffrement et de signature
 
 
-Les plateformes FranceConnect et FranceConnect+ reposent toutes les deux sur le même protocole, à savoir OpenId Connect. Hormis les différences cités ci dessus, leur fonctionnement est similaire. Ainsi les intégrations de FranceConnect et FranceConnect+ sont très similaire et ne nécessite pas pour un Fournisseur de Service une charge d'intégration important pour devenir Fournisseur de Service pour FranceConnect+ si vous l'êtes déjà pour FranceConnect. 
+Les plateformes FranceConnect et FranceConnect+ reposent toutes les deux sur le même protocole, à savoir [OpenID Connect](https://openid.net/connect/). Hormis les différences cités ci dessus, leur fonctionnement est similaire. Ainsi les intégrations de FranceConnect et FranceConnect+ sont très similaire et ne nécessite pas pour un Fournisseur de Service une charge d'intégration important pour devenir Fournisseur de Service pour FranceConnect+ si vous l'êtes déjà pour FranceConnect. 

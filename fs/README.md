@@ -18,6 +18,7 @@ Vous souhaitez devenir Fournisseur de Service pour FranceConnect+, voici les que
 * [Quelles sont les étapes pour devenir Fournisseur de Service ?](pilotage/pilotage-etapes.md)
 * [Quels sont les différents acteurs que je dois faire intervenir dans mon organisation pour devenir Fournisseur de Service ?](pilotage/pilotage-demarches-acteurs.md)
 * [Quelles sont les différences entre FranceConnect et FranceConnect+ ?](pilotage/pilotage-differences-fc-fc+.md)
+* [Quels sont les fournisseurs d'identités disponible sur FranceConnect+ ? ](pilotage/piloge-fi.md)
 * [Je suis déjà Fournisseur de Service pour FranceConnect, que dois je faire en plus pour devenir Fournisseur de Service pour FranceConnect+ ?](pilotage/pilotage-integrer-fc+-apres-fc.md)
 
 
@@ -30,6 +31,7 @@ Vous avez lancé un projet pour devenir FranceConnect+ et vous souhaiter connait
 - [Quelles sont les données que je peux récupérer par FranceConnect+ sur mes usagers ?](projet/projet-donnees-fc+.md)
 - [Qu'est ce qu'eIDAS et quels sont les niveaux de garantie de FranceConnect+ ?](projet/projet-niveau-eidas.md)
 - [Quel est l'écosystème de FranceConnect+ ?](projet/projet-ecosysteme-fc+.md)
+- [Comment puis-je réaliser des tests de FranceConnect+ avant de soumettre ma demande d'habilitation ?](projet-tests-sans-datapass.md)
 
 # J'intègre FranceConnect+ dans mon service en ligne
 
@@ -48,13 +50,6 @@ Vous avez lancé un projet pour devenir FranceConnect+ et vous souhaiter connait
 ## Je veux connaitre les règles d'intégration du bouton dans mon service
 
 - [Comment intégrer le boutons FranceConnect+ à mon service ?](technique/technique-boutons-fc.md)
-
-
-## Réaliser des tests avant de soumettre sa demande d'habilitation
-
-Un fournisseur de Service de démonstration est disponible à l'adresse  [fsp1v2.integ01.dev-franceconnect.fr](https://fsp1v2.integ01.dev-franceconnect.fr//). 
-
-
 
 
 # Je veux déconnecter l'utilisateur de FranceConnect

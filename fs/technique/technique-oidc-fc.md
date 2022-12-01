@@ -44,7 +44,7 @@ FranceConnect+ permet de récupérer différents types de jetons :
 | Jeton | Format |
 | --- | --- |
 | *access token* | chaine de caractères |
-| *id_tokent* | JWT | 
+| *id_token* | JWT | 
 | *user info* | JWT | 
 
 L'ensemble de jetons JWT fournis par FranceConnect+, c'est à dire l'ID Token et les *User Info* sont chiffrés et signés afin de garantir un niveau de confidentialité et d'intégrité afin de satisfaire les exigences des niveaux de garantie subtantiel et élévée défini dans le règlement eIDAS. 
