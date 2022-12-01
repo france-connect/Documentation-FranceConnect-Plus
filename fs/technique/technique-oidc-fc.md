@@ -99,5 +99,9 @@ Les clés publiques de chiffrement du fournisseur de service doivent être expos
 
 [Plus d'information sur le JWK](https://datatracker.ietf.org/doc/html/rfc7517)
 
+---
 
+Voir aussi : 
 
+- [Qu'est ce que le protocole OpenID Connect ?](technique-oidc.md)
+- [Quels échanges ont lieu entre mon service et FranceConnect+ lors d'une cinématique ?](technique-oidc-flux.md)

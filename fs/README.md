@@ -42,11 +42,12 @@ Vous avez lancé un projet pour devenir FranceConnect+ et vous souhaiter connait
 
 - [Comment accéder aux différents environnements de FranceConnect+ ?](technique/technique-env-fc.md)
 - [Comment utiliser les scopes OpenID Connect pour accéder aux données des utilisateurs ? ](technique/technique-scope-fc.md)
+- [Comment utiliser les niveaux de garantie eIDAS sur FranceConnect+ ?](technique/technique-eidas.md)
 
 
 ## Je veux connaitre les règles d'intégration du bouton dans mon service
 
-- [Quel visuel utiliser pour les boutons FranceConnect?](technique/technique-boutons-fc.md)
+- [Comment intégrer le boutons FranceConnect+ à mon service ?](technique/technique-boutons-fc.md)
 
 
 ## Réaliser des tests avant de soumettre sa demande d'habilitation
@@ -54,48 +55,6 @@ Vous avez lancé un projet pour devenir FranceConnect+ et vous souhaiter connait
 Un fournisseur de Service de démonstration est disponible à l'adresse  [fsp1v2.integ01.dev-franceconnect.fr](https://fsp1v2.integ01.dev-franceconnect.fr//). 
 
 
-
-
-
-
-
-
-## Détail du fonctionnement
-
-<img src="diagrams/diagram-sequence-fs-fc.png" alt="drawing" />
-
-
-                        
-La récupération de l'identité pivot doit être faite dans la suite immédiate des appels précédents (authentification et récupération du code). Le fait d'appeler ce Web service plus tard n'est aujourd'hui pas proposé.
-
-
-## Utiliser les niveaux eIDAS en tant que FS
-
-EIDAS est un standard européen visant à normaliser et à améliorer la sécurité de l'identification sur Internet. Il propose notamment 3 niveaux de garantie sur les moyens utilisés pour l'identification. Vous pouvez, en tant que Fournisseur de Service, utiliser les niveaux eIDAS afin de récupérer une identité avec le niveau de garantie correspondant à votre besoin. 
-
-Comme la norme ne prévoit pas aujourd'hui de mesures techniques particulières pour préciser le niveau souhaité, FranceConnect+ utilise le claim optionnel "acr" (http://openid.net/specs/openid-connect-basic-1_0.html#RequestParameters) de la norme OpenID Connect. Pour le Fournisseur de Service, cela veut dire remplir le claim optionnel acr_values lors de la demande d'authentification (appel à l'endpoint /api/v2/authorize).
-
-Au sujet du claim acr_values, on notera que c'est, selon la norme, un "voluntary claim" qui théoriquement traduit une préférence et non une exigence.  Lorsque ce claim est fourni, FranceConnect+ ne proposera à l'utilisateur que les Fournisseurs d'Identité pouvant satisfaire le niveau eIDAS demandé. En retour, le Fournisseur d'Identité renverra par le biais de FranceConnect+ le niveau eIDAS avec lequel l'authentification a eu lieu. Le Fournisseur de Service doit vérifier le niveau eIDAS utilisé afin de s'assurer que celui-ci est bien conforme  au niveau eIDAS attendu.
-
-Exemple d'appel précisant un niveau eIDAS minimum :
-
-```
-https://fcp.integ01.dev-franceconnect.fr/api/v2/authorize?response_type=code&client_id=123456&redirect_uri=https%3A%2F%2Ffournisseur-de-service.dev-franceconnect.fr%2Flogin-callback&scope=openid%20profile%20email%20address%20phone%20preferred_username%20email%20address%20phone%20preferred_username&acr_values=eidas1&state=randomValue&nonce=randomValue
-```
-
-Afin d'y arriver, il faut spécifier une ou plusieurs valeurs parmi les suivantes :
-
-* eidas2 : niveau substantiel 
-* eidas3 : niveau élevé 
-
-
-Si le claim acr n'est pas précisé, le niveau par défaut est fixé à eidas3, le plus sécurisé.
-Si le claim est précisé, FranceConnect+ ne proposera à l'utilisateur que les fournisseurs d'identité de niveau supérieur ou égal. Sinon, FranceConnect+ ne proposera à l'utilisateur que les Fournisseurs d'Identité de niveau élevé.
-Si plusieurs niveaux sont précisés, FranceConnect+ prend en compte le niveau le plus bas.
-Si le claim est considéré par FranceConnect+ comme n'étant pas valide, le niveau par défaut est utilisé.
-Le niveau eIDAS utilisé pour l'authentification est retourné par le fournisseur d'identité (cf la documentation du FI), par le biais de FranceConnect+ (qui le transmet sans le modifier) et du claim acr dans l'ID Token retourné au Fournisseur de Service.
-
-Il est de la responsabilité du Fournisseur de service de s'assurer que le niveau retourné est au moins égal ou supérieur à celui demandé (si eidas2 est demandé, eidas3 doit être accepté tout comme eidas2).
 
 
 # Je veux déconnecter l'utilisateur de FranceConnect
