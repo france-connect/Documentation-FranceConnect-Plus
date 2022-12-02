@@ -46,6 +46,8 @@ Vous avez lancé un projet pour devenir FranceConnect+ et vous souhaiter connait
 - [Comment accéder aux différents environnements de FranceConnect+ ?](technique/technique-env-fc.md)
 - [Comment utiliser les scopes OpenID Connect pour accéder aux données des utilisateurs ? ](technique/technique-scope-fc.md)
 - [Comment utiliser les niveaux de garantie eIDAS sur FranceConnect+ ?](technique/technique-eidas.md)
+- [Comment déconnecter un utilisateur de FranceConnect+ ?](technique/technique-deconnexion.md)
+- [Quelles sont les durées de vie des sessions et jetons de FranceConnect+ ?](technique/technique-sessions.md)
 
 
 ## Je veux connaitre les règles d'intégration du bouton dans mon service
@@ -53,48 +55,13 @@ Vous avez lancé un projet pour devenir FranceConnect+ et vous souhaiter connait
 - [Comment intégrer le bouton FranceConnect+ à mon service ?](technique/technique-boutons-fc.md)
 
 
-# Je veux déconnecter l'utilisateur de FranceConnect
 
-Pour les niveaux Substantiel et Elevé, FranceConnect+ ne gère pas de session utilisateur et demande systématique à l'utilisateur de se ré-authentifier auprès d'un Founisseur d'Identité.
-
-Cependant, il est tout de même demandé au Fournisseur de Service de gérer : 
-* la déconnexion auprès de FranceConnect
-* la révocation de l’accès token
-
-## Cinématique de déconnexion par un Fournisseur de Service
-
-FranceConnect+ implémente la section sur la déconnexion en cours de spécification dans la norme OpenID Connect : https://openid.net/specs/openid-connect-frontchannel-1_0.html#RPLogout
-
-FranceConnect+ ne gère pas la déconnexion de l'usager au service FranceConnect+ à la fermeture du navigateur.
-
-Le Fournisseur de Service doit pouvoir déconnecter l'utilisateur de sa session FranceConnect. La cinématique globale est celle-ci :
-
-1. L' utilisateur clique sur un lien de déconnexion présenté par le FS.
-2. Le FS doit déconnecter l'utilisateur de son application et de sa session FranceConnect.
-3. L' utilisateur est redirigé vers la page de retour spécifiée par le FS.
-4. Le FS doit préciser l'URL où l'on doit rediriger l'utilisateur une fois qu'il a choisi de se déconnecter ou non de FranceConnect+ via le paramètre post_logout_redirect_uri, ainsi que passer l'id_token récupéré lors de l'authentification de l'utilisateur via le paramètre id_token_hint.
-
-Il est obligatoire de renseigner les différentes urls de redirections de déconnexion dans les paramètres client
-
-## Révocation de l'access token
-
-En tant que Fournisseur de Service, vous avez la possibilité de révoquer un *access token*. Pour cela, FranceConnect+ respecte les spécifications OAuth 2.0 sur lesquelles se base OpenId Connect. La spécification de la révocation de token se trouve à cette adresse https://tools.ietf.org/html/rfc7009 
 
 # Gestion d'erreurs entre FranceConnect+ et le Fournisseur de Service
 
 En tant qu'OpenID Connect provider, FranceConnect+ peut renvoyer toutes sortes d'erreurs à une application cliente. Pour ce faire, FranceConnect+ passe par le mécanisme de retour d'erreurs d'un fournisseur d'identité openid connect tel que décrit dans la norme ( http://openid.net/specs/openid-connect-core-1_0.html#AuthError, en particulier les sections 3.1.2.6 (authentification), 3.1.3.4 (jeton d'accès), 5.3.3 (service d'informations utilisateur) )
 
 
-# Les données de FranceConnect+ qui expirent
-
-FranceConnect+ gère plusieurs types de données ayant une durée de vie limitée lors du déroulé d'une authentification par OpenID Connect ou de la fourniture d'un jeton d'accès à une ressource protégée (cinématique OAuth2 classique). Chacune de ces données possède une durée de vie qui lui est propre au delà de laquelle elle doit être régénérée. En voici le détail :
-
-| Type | Utilisé lors de ... | Durée de vie |
-| ------ | ------ | ------ |
-| Session Web | A chaque authentification et pour maintenir la session côté FranceConnect+ | 30 minutes sans action |
-| Access Token | Récupération d'informations (phase 3 cinématique d'authentification / cinématique OAuth2) | 60 secondes |
-| Authorization code | Code fourni lors du début de la démarche d'authentification, il sert ensuite à récupérer l'access token | 30 secondes |
-| Consentement | Consentement donné par l'utilisateur pour l'accès à une ressource protégée (associée à un scope au sens OAuth2) | 5 secondes |
 
 
 # Glossaire
