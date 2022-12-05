@@ -327,7 +327,7 @@ http://openid.net/specs/openid-connect-session-1_0.html#RPLogout
 
 > | nom | requis/optionnel | type de données | description |
 > |--------|-----------|----------------|------------------------------------------------------|
-> | `id_token_hint` | requis | string | `<ID_TOKEN>` contenu dans la réponse du `Token Endpoint` |
+> | `id_token_hint` | requis | string | JWT renvoyé par le endpoint `Token Endpoint` |
 > | `state` | requis | string | `<STATE>` Champ obligatoire, généré aléatoirement par le FS, que FC+ renvoie tel quel dans la redirection qui suit la déconnexion, pour être ensuite vérifié par le FS. Il est utilisé afin d’empêcher l’exploitation de failles CSRF |
 > | `post_logout_redirect_uri` | requis | string | `<POST_LOGOUT_REDIRECT_URI>` L'URL de redirection vers le FS après la déconnexion à FranceConnect+ |
 
