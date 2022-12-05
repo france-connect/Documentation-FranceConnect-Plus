@@ -1,6 +1,6 @@
 # FranceConnect+ Endpoints
 
-FranceConnect+ met en oeuvre le protocole OpenID Connect pour permettre à un Fournisseur de Services de déléguer à FranceConnect+ l'identification et l'authentification des agents.
+FranceConnect+ met en oeuvre le protocole OpenID Connect pour permettre à un Fournisseur de Services de déléguer à FranceConnect+ l'identification et l'authentification des usagers.
 
 #### Openid Configuration Endpoints
 
@@ -82,29 +82,29 @@ https://openid.net/specs/openid-connect-core-1_0.html#AuthorizationEndpoint
 > | `response_type` | requis | string | `code` |
 > | `client_id` | requis | string | `<CLIENT_ID>` Identifiant du FS, communiqué lors de son inscription auprès de FC+ |
 > | `redirect_uri` | requis | string |` <FS_URL>%2F<URL_CALLBACK>` Url de retour vers le FS (encodée), communiquée lors de son inscription auprès de FC+ |
-> | `acr_values` | requis | string | `eidas1` FranceConnect+ ne garantie que le niveau faible d'eIDAS |
+> | `acr_values` | requis | string | `eidas2 | eidas3` FranceConnect+ supporte les niveaux eIDAS substantiel et élevé |
 > | `scope` | requis | string | `<SCOPES>` Liste des scopes demandés séparés par des espaces (%20 au format unicode dans l'URL) ou des '+' |
 > | `claims` | optionnel | string | `<CLAIMS>` Objet JSON encodé décrivant les claims demandés ([Voir spécification Openid Connect](https://openid.net/specs/openid-connect-core-1_0.html#ClaimsParameter)) |
 > | `state` | requis | string (minimum 32 caractères) | `<STATE>` Champ obligatoire, généré aléatoirement par le FS, que FC+ renvoie tel quel dans la redirection qui suit l'authentification, pour être ensuite vérifié par le FS. Il est utilisé afin d’empêcher l’exploitation de failles CSRF |
 > | `nonce` | requis | string (minimum 32 caractères) | `<NONCE>` Champ obligatoire, généré aléatoirement par le FS que FC renvoie tel quel dans la réponse à l'appel au `Token Endpoint`, pour être ensuite vérifié par le FS. Il est utilisé pour empêcher les attaques par rejeu |
-> | `prompt` | optionnel | string | `login` si le FS veut forcer la reauthentification au FI. Par défaut, le FI réutilisera une session existante sans demander une reconnexion. (Single Sign-On côté FI) |
+> | `prompt` | optionnel | string | `login` FC+ force une demande de réauthentification avec le FI à chaque connexion |
 
 ##### Réponses
 
 > | code http     | content-type                      |réponse                                                            |
 > |---------------|-----------------------------------|---------------------------------------------------------------------|
-> | `303` (succès)        | `text/html;charset=UTF-8`        | Redirection vers la page de recherche des FI `/api/v2/interaction/{interactionHash}` où {interactionHash} est un hash lié à la session de l'usager |
+> | `303` (succès)        | `text/html;charset=UTF-8`        | Redirection vers la page de sélection du FI `/api/v2/interaction/{interactionHash}` où {interactionHash} est un hash lié à la session de l'usager |
 > | `303` (erreur) | `text/html;charset=UTF-8`        | [Redirection vers le FS après erreur de connexion](#redirection-vers-le-fs-après-erreur-de-connexion) |
 > | `400` (mauvais format)| `text/html;charset=UTF-8`        | La page d'erreur avec code `Y000400` est affichée en cas de mauvais format |
 
 ##### Exemple d'appel
 
 > ```
-> GET /api/v2/authorize?response_type=code&prompt=login&acr_values=eidas1&
-> scope=openid+uid+given_name+usual_name+email&
+> GET /api/v2/authorize?response_type=code&prompt=login&acr_values=eidas2&
+> scope=openid+gender+given_name+family_name+email+preferred_username&
 > claims=%7B%22id_token%22%3A%7B%22amr%22%3A%7B%22essential%22%3Atrue%7D%7D%7D&
 > client_id=6925fb8143c76eded44d32b40c0cb1006065f7f003de52712b78985704f39950&
-> redirect_uri=https%3A%2F%2Ffsa1v2.integ01.dev-agentconnect.fr%2Foidc-callback&
+> redirect_uri=https%3A%2F%2Ffsp1v2.integ01.fcp.fournisseur-de-service.fr%2Foidc-callback&
 > state=9ed67ae42fdc5d0a6867a5425a284745f4f73ce8b6edf76e453487aa1b73cc89&
 > nonce=7db9b35458f2288bade947791f1c8fa2d02954f8eb7d9909dc68784f7c4aea29 HTTP/1.1
 > Host: auth.integ01.dev-franceconnect.fr
@@ -134,12 +134,12 @@ https://openid.net/specs/openid-connect-core-1_0.html#AuthorizationEndpoint
 > | `response_type` | requis | string | `code` |
 > | `client_id` | requis | string | `<CLIENT_ID>` Identifiant du FS, communiqué lors de son inscription auprès de FC+ |
 > | `redirect_uri` | requis | string |`<FS_URL>%2F<URL_CALLBACK>` Url de retour vers le FS (encodée), communiquée lors de son inscription auprès de FC+ |
-> | `acr_values` | requis | string | `eidas1` FranceConnect+ ne garantie que le niveau faible d'eIDAS |
+> | `acr_values` | requis | string | `eidas2 | eidas3` FranceConnect+ supporte les niveaux eIDAS substantiel et élevé |
 > | `scope` | requis | string | `<SCOPES>` Liste des scopes demandés séparés par des espaces (%20 au format unicode dans l'URL) ou des '+' |
 > | `claims` | optionnel | string | `<CLAIMS>` Objet JSON encodé décrivant les claims demandés ([Voir spécification Openid Connect](https://openid.net/specs/openid-connect-core-1_0.html#ClaimsParameter)) |
 > | `state` | requis | string (minimum 32 caractères) | `<STATE>` Champ obligatoire, généré aléatoirement par le FS, que FC+ renvoie tel quel dans la redirection qui suit l'authentification, pour être ensuite vérifié par le FS. Il est utilisé afin d’empêcher l’exploitation de failles CSRF |
 > | `nonce` | requis | string (minimum 32 caractères) | `<NONCE>` Champ obligatoire, généré aléatoirement par le FS que FC renvoie tel quel dans la réponse à l'appel au `Token Endpoint`, pour être ensuite vérifié par le FS. Il est utilisé pour empêcher les attaques par rejeu |
-> | `prompt` | optionnel | string | `login` si le FS veut forcer la reauthentification au FI. Par défaut, le FI réutilisera une session existante sans demander une reconnexion. (Single Sign-On côté FI) |
+> | `prompt` | optionnel | string | `login` FC+ force une demande de réauthentification avec le FI à chaque connexion |
 
 ##### Réponses
 
@@ -156,11 +156,11 @@ https://openid.net/specs/openid-connect-core-1_0.html#AuthorizationEndpoint
 > Host: auth.integ01.dev-franceconnect.fr
 > Content-Type: application/x-www-form-urlencoded
 >
-> response_type=code&prompt=login&acr_values=eidas1&
-> scope=openid+uid+given_name+usual_name+email&
+> response_type=code&prompt=login&acr_values=eidas2&
+> scope=openid+gender+given_name+family_name+email+preferred_username&
 > claims=%7B%22id_token%22%3A%7B%22amr%22%3A%7B%22essential%22%3Atrue%7D%7D%7D&
 > client_id=6925fb8143c76eded44d32b40c0cb1006065f7f003de52712b78985704f39950&
-> redirect_uri=https%3A%2F%2Ffsa1v2.integ01.dev-agentconnect.fr%2Foidc-callback&
+> redirect_uri=https%3A%2F%2Ffsp1v2.integ01.fcp.fournisseur-de-service.fr%2Foidc-callback&
 > state=9ed67ae42fdc5d0a6867a5425a284745f4f73ce8b6edf76e453487aa1b73cc89&
 > nonce=7db9b35458f2288bade947791f1c8fa2d02954f8eb7d9909dc68784f7c4aea29
 > ```
@@ -193,7 +193,7 @@ Exemple de retour vers le FS de mock
 > ```
 > GET /oidc-callback?state=9ed67ae42fdc5d0a6867a5425a284745f4f73ce8b6edf76e453487aa1b73cc89
 > error_description=User+auth+aborted&error=access_denied HTTP/1.1
-> Host: fsa1v2.integ01.dev-agentconnect.fr
+> Host: fsp1v2.integ01.fcp.fournisseur-de-service.fr
 > ```
 
 </details>
@@ -224,7 +224,7 @@ Exemple de retour vers le FS de mock
 > ```
 > GET /oidc-callback?code=_DOF10msXreojwyScrXmfqvwp8q3p1G7ZIzatMj60it&
 > state=9ed67ae42fdc5d0a6867a5425a284745f4f73ce8b6edf76e453487aa1b73cc89 HTTP/1.1
-> Host: fsa1v2.integ01.dev-agentconnect.fr
+> Host: fsp1v2.integ01.fcp.fournisseur-de-service.fr
 > ```
 
 </details>
@@ -321,7 +321,7 @@ Implémente le `Logout Endpoint` de Openid Connect:
 
 http://openid.net/specs/openid-connect-session-1_0.html#RPLogout
 
-:warning: Cet appel doit être réalisé via une redirection dans le navigateur de l'agent, afin d'expirer les cookies de session FranceConnect+ et FI.
+:warning: Cet appel doit être réalisé via une redirection dans le navigateur de l'usager, afin d'expirer les cookies de session FranceConnect+ et FI.
 
 ##### Paramètres
 
@@ -369,7 +369,7 @@ FranceConnect+ renvoie le state communiqué par le FS lors de la demande de déc
 
 > | nom | requis/optionnel | type de données | description |
 > |--------|-----------|----------------|------------------------------------------------------|
-> | `state` | requis | string (minimum 32 caractères) | `<STATE>` communiqué par par le FS dans l'appel au `Logout Endpoint`. Cette information est à vérifier par le FS, afin d’empêcher l’exploitation de failles CSRF | |
+> | `state` | requis | string (minimum 32 caractères) | `<STATE>` communiqué par par le FS dans l'appel au `Logout Endpoint`. Cette information est à vérifier par le FS, afin d’empêcher l’exploitation de failles CSRF |
 
 ##### Exemple d'appel
 
@@ -377,7 +377,7 @@ Exemple de retour vers le FS de mock à déconnexion
 
 > ```
 > GET /logout-callback?state=3b7bd7fb38ccab89864563f17a89c4cb3bd400164ce828b4cfc2cb01ce8ed9da HTTP/1.1
-> Host: fsa1v2.integ01.dev-agentconnect.fr
+> Host: fsp1v2.integ01.fcp.fournisseur-de-service.fr
 > ```
 
 </details>
