@@ -75,7 +75,7 @@ L'identité pivot fait partie des données usagers fournies par les Fournisseurs
 |--------------|-------------|--------|------------------------------------------------------------------------------------------------------------|
 | given_name   | oui         | string | les prénoms séparés par des espaces (standard OpenIDConnect)                                               |
 | family_name  | oui         | string | le nom de famille de naissance (standard OpenIDConnect)                                                    |
-| birthdate    | oui         | string | la date de naissance au format YYYY-MM-DD (standard OpenIDConnect)                                         |
+| birthdate    | oui         | string | la date de naissance au format YYYY-MM-DD (standard OpenIDConnect), au format YYYY-MM-00 ou YYYY-00-00 pour les présumés nés                                         |
 | gender       | oui         | string | male pour les hommes, female pour les femmes (standard OpenIDConnect)                                      |
 | birthplace   | oui         | string | le code INSEE du lieu de naissance sur 5 chiffres (ou une chaîne vide si la personne est née à l'étranger) |
 | birthcountry | oui         | string | le code INSEE du pays de naissance sur 5 chiffres                                                          |
