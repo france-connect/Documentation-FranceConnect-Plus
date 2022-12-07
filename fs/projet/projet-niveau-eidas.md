@@ -1,4 +1,4 @@
-[Documentation Fournisseur de Service](../README.md) > [Gerer un projet d'integration FranceConnect+](../README.md#je-g%C3%A8re-un-projet-dint%C3%A9gration-de-franceconnect) > eIDAS
+[Documentation Fournisseur de Service](../README.md) > [Je gère un projet d'intégration de FranceConnect+](../README.md#je-g%C3%A8re-un-projet-dint%C3%A9gration-de-franceconnect) > eIDAS
 
 ---
 

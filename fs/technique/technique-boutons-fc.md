@@ -1,4 +1,4 @@
-[Documentation Fournisseur](../README.md) > [J'intègre FranceConnect+ dans mon service en ligne](../README.md#jintègre-franceconnect-dans-mon-service-en-ligne) > Comment intégrer le bouton FranceConnect+ à mon service ?
+[Documentation Fournisseur de Service](../README.md) > [J'intègre FranceConnect+ dans mon service en ligne](../README.md#jintègre-franceconnect-dans-mon-service-en-ligne) > Comment intégrer le bouton FranceConnect+ à mon service ?
 
 ---
 
@@ -54,7 +54,7 @@ Le bouton FranceConnect+ **doit être distinct de vos moyens de connexion natifs
 - une séparation visible doit être mise en place entre eux ; 
 - la mention "OU" doit également y figurer afin de faire comprendre à l'utilisateur qu'il peut choisir entre FranceConnect+ ou un autre mode de connexion/d'inscription.
 
-![Intégration du bouton FranceConnect+ dans la page](../images/technique/techniqiue-guidelines-fc%2B-position.png)
+![Intégration du bouton FranceConnect+ dans la page](../images/technique/technique-guidelines-fc%2B-position.png)
 
 ### Intégration dans votre service. 
 

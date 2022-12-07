@@ -48,15 +48,16 @@ Vous avez lancé un projet pour devenir FranceConnect+ et vous souhaiter connait
 - [Comment utiliser les niveaux de garantie eIDAS sur FranceConnect+ ?](technique/technique-eidas.md)
 - [Comment déconnecter un utilisateur de FranceConnect+ ?](technique/technique-deconnexion.md)
 - [Quelles sont les durées de vie des sessions et jetons de FranceConnect+ ?](technique/technique-sessions.md)
+ - [Comment gérer les erreurs renvoyées par FranceConnect+ ?](technique/technique-erreurs.md)
 
 
 ## Je veux connaitre les règles d'intégration du bouton dans mon service
 
 - [Comment intégrer le bouton FranceConnect+ à mon service ?](technique/technique-boutons-fc.md)
 
+## Glossaire
+
+Vous êtes perdu dans l'ensemble des termes techniques présents dans cette documentation ? Nous avons notre [glossaire](technique/technique-glossaire.md) qui est là pour vous aider. 
 
 
 
-# Gestion d'erreurs entre FranceConnect+ et le Fournisseur de Service
-
-En tant qu'OpenID Connect provider, FranceConnect+ peut renvoyer toutes sortes d'erreurs à une application cliente. Pour ce faire, FranceConnect+ passe par le mécanisme de retour d'erreurs d'un fournisseur d'identité openid connect tel que décrit dans la norme ( http://openid.net/specs/openid-connect-core-1_0.html#AuthError, en particulier les sections 3.1.2.6 (authentification), 3.1.3.4 (jeton d'accès), 5.3.3 (service d'informations utilisateur) )

@@ -1,3 +1,4 @@
+[Documentation Fournisseur de Service](../README.md) > [Comment puis-je réaliser des tests de FranceConnect+ avant de soumettre ma demande d'habilitation ?](../README.md#je-g%C3%A8re-un-projet-dint%C3%A9gration-de-franceconnect) > eIDAS
 
 ---
 

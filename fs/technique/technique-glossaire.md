@@ -1,18 +1,21 @@
 # Glossaire
 
 #### **FC_URL:**
-URL de FranceConnect+ 
+Il s'agit le l'URL de l'environnement FranceConnect+ que vous utiliser: 
+- [integration](technique-env-fc.md#acc%C3%A8s-%C3%A0-lenvironnement-dint%C3%A9gration) : https://auth.integ01.dev-franceconnect.fr
+- [production](technique-env-fc.md#acc%C3%A8s-%C3%A0-lenvironnement-de-production) : https://auth.franceconnect.gouv.fr
 
 #### **FS_URL:**
-Votre URL, en tant que fournisseur de service  
+Il s'agit de l'URLde votre fournisseur de service  
 
-#### **FD_URL:**
-URL du fournisseur de données
 
 #### **CALLBACK_URL_DATA:**
 le callback du FS, communiqué lors de son inscription auprès de FC 
+
 #### **POST_LOGOUT_REDIRECT_URI:**
-L'URL de redirection après la demande de déconnexion FC 
+Il s'agit de l'URL de votre fournisseur de service vers laquelle l'usager va être redirigée une fois l'utilisateur déconnecté de FranceConnect+. 
+
+[plus d'info](https://openid.net/specs/openid-connect-rpinitiated-1_0.html#RedirectionAfterLogout)
 
 #### **CLIENT_ID:**
 Identifiant du FS, communiqué lors de son inscription auprès de FC 
@@ -27,6 +30,7 @@ Code retourné (dans l'URL) par FC au FS lorsque ce dernier fait un appel sur le
 Token retourné (dans le corps HTTP) par l'appel au endpoint FC_URL/api/v2/token. Il est ensuite passé lors de l'appel au endpoint FC_URL/api/v2/userinfo
 
 #### **SCOPES:**
+Les scopes permettent de définir
 Liste des scopes demandés séparés par des espaces (donc par %20 au format unicode dans l'URL)  
 	
 Voici la liste supportée par FranceConnect+ :

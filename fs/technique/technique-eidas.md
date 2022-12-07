@@ -1,4 +1,4 @@
-[Documentation Fournisseur](../README.md) > [J'intègre FranceConnect+ dans mon service en ligne](../README.md#jintègre-franceconnect-dans-mon-service-en-ligne) > Comment utiliser les niveaux de garantie eIDAS sur FranceConnect+ ?
+[Documentation Fournisseur de Service](../README.md) > [J'intègre FranceConnect+ dans mon service en ligne](../README.md#jintègre-franceconnect-dans-mon-service-en-ligne) > Comment utiliser les niveaux de garantie eIDAS sur FranceConnect+ ?
 
 ---
 

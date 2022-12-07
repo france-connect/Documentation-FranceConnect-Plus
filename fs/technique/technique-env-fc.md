@@ -31,11 +31,12 @@ Les adresses de notre environnement d'intégration sont les suivantes :
 
 | EndPoint | Adresse |
 | ------ | ------ |
-| Discovery URL | https://auth.integ01.dev-franceconnect.fr/api/v2/.well-known/openid-configuration | 
-| Authorization | https://auth.integ01.dev-franceconnect.fr/api/v2/authorize |
-| Token | https://auth.integ01.dev-franceconnect.fr/api/v2/token | 
-| UserInfo | https://auth.integ01.dev-franceconnect.fr/api/v2/userinfo | 
-| Logout | https://auth.integ01.dev-franceconnect.fr/api/v2/session/end | 
+| [Discovery URL](technique-endpoints.md#openid-configuration-endpoints) | https://auth.integ01.dev-franceconnect.fr/api/v2/.well-known/openid-configuration | 
+|  [JWKS URL](technique-endpoints.md#openid-configuration-endpoints) | https://auth.integ01.dev-franceconnect.fr/api/v2/jwks |
+| [Authorization](technique-endpoints.md#authorization-endpoint) | https://auth.integ01.dev-franceconnect.fr/api/v2/authorize |
+| [Token](technique-endpoints.md#token-endpoint) | https://auth.integ01.dev-franceconnect.fr/api/v2/token | 
+| [UserInfo](technique-endpoints.md#userinfo-endpoint) | https://auth.integ01.dev-franceconnect.fr/api/v2/userinfo | 
+| [Logout](technique-endpoints.md#logout-endpoint) | https://auth.integ01.dev-franceconnect.fr/api/v2/session/end | 
 
 ## Accès à l'environnement de production FranceConnect+
 
@@ -58,11 +59,12 @@ Les adresses de notre environnement de production sont les suivantes :
 
 | EndPoint | Adresse |
 | ------ | ------ |
-| Discovery URL | https://auth.franceconnect.gouv.fr/api/v2/.well-known/openid-configuration | 
-| Authorization | https://auth.franceconnect.gouv.fr/api/v2/authorize |
-| Token | https://auth.franceconnect.gouv.fr/api/v2/token | 
-| UserInfo | https://auth.franceconnect.gouv.fr/api/v2/userinfo | 
-| Logout | https://auth.franceconnect.gouv.fr/api/v2/session/end | 
+| [Discovery URL](technique-endpoints.md#openid-configuration-endpoints) | https://auth.franceconnect.gouv.fr/api/v2/.well-known/openid-configuration |
+|  [JWKS URL](technique-endpoints.md#openid-configuration-endpoints) | https://auth.franceconnect.gouv.fr/api/v2/jwks |
+| [Authorization](technique-endpoints.md#authorization-endpoint) | https://auth.franceconnect.gouv.fr/api/v2/authorize |
+| [Token](technique-endpoints.md#token-endpoint) | https://auth.franceconnect.gouv.fr/api/v2/token | 
+| [UserInfo](technique-endpoints.md#userinfo-endpoint) | https://auth.franceconnect.gouv.fr/api/v2/userinfo | 
+| [Logout](technique-endpoints.md#logout-endpoint) | https://auth.franceconnect.gouv.fr/api/v2/session/end | 
 
 
 ---
@@ -70,3 +72,5 @@ Les adresses de notre environnement de production sont les suivantes :
 Voir aussi :
 
 - [Comment effectuer ma demande d'habilitation pour FranceConnect+ ?](../projet/projet-datapass.md)
+- [Quels échanges ont lieu entre mon service et FranceConnect+ lors d'une cinématique ?](./technique-oidc-flux.md) 
+- [Comment utiliser les différents Endpoints FranceConnect+ ?](technique-endpoints.md)

@@ -1,4 +1,4 @@
-[Documentation Fournisseur de Service](README.md) > [Devenir Fournisseur de Service FranceConnect+](../../README.md#je-veux-devenir-fournisseur-de-service) > Acteurs à impliquer
+[Documentation Fournisseur](../README.md) > [Je veux devenir Fournisseur de Service](../README.md#je-veux-devenir-fournisseur-de-service) > Quels sont les acteurs à impliquer dans l'intégration de FranceConnect+ ?
 
 ---
 
@@ -38,3 +38,9 @@ systèmes d’information (prévention, protection, détection, résilience,
 remédiation) et veille à son application. Il assure un rôle de conseil,
 d’assistance, d’information, de formation et d’alerte, en particulier
 auprès des directeurs métiers et/ou de la direction de son périmètre.
+
+---
+
+Voir aussi : 
+
+* [Quelles sont les étapes pour devenir Fournisseur de Service ? ](pilotage-etapes.md)

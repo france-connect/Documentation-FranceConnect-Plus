@@ -1,8 +1,12 @@
-# FranceConnect+ Endpoints
+[Documentation Fournisseur de Service](../README.md) > [J'intègre FranceConnect+ dans mon service en ligne](../README.md#jintègre-franceconnect-dans-mon-service-en-ligne) > Comment utiliser les différents Endpoints FranceConnect+ ?
+
+---
+
+# Comment utiliser les différents Endpoints FranceConnect+ ?
 
 FranceConnect+ met en oeuvre le protocole OpenID Connect pour permettre à un Fournisseur de Services de déléguer à FranceConnect+ l'identification et l'authentification des agents.
 
-#### Openid Configuration Endpoints
+### Openid Configuration Endpoints
 
 <details>
  <summary><code>GET</code> <code><b>/api/v2/.well-known/openid-configuration</b></code> </summary>
@@ -64,7 +68,7 @@ https://auth.integ01.dev-franceconnect.fr/api/v2/jwks
 
 </details>
 
-#### Authorization Endpoint
+### Authorization Endpoint
 
 <details>
  <summary><code>GET</code> <code><b>/api/v2/authorize</b></code> </summary>
@@ -167,7 +171,7 @@ https://openid.net/specs/openid-connect-core-1_0.html#AuthorizationEndpoint
 
 </details>
 
-#### Redirection vers le FS après erreur de connexion
+### Redirection vers le FS après erreur de connexion
 
 <details>
  <summary><code>GET</code> <code><b>&lt;FS_URL&gt;/&lt;URL_CALLBACK&gt;</b></code> </summary>
@@ -199,7 +203,7 @@ Exemple de retour vers le FS de mock
 </details>
 
 
-#### Redirection vers le FS après connexion
+### Redirection vers le FS après connexion
 
 <details>
  <summary><code>GET</code> <code><b>&lt;FS_URL&gt;/&lt;URL_CALLBACK&gt;</b></code> </summary>
@@ -229,7 +233,7 @@ Exemple de retour vers le FS de mock
 
 </details>
 
-#### Token Endpoint
+### Token Endpoint
 
 <details>
  <summary><code>POST</code> <code><b>/api/v2/token</b></code> </summary>
@@ -278,7 +282,7 @@ Voir le format de l'[id_token](../doc_fs.md#id_token).
 
 </details>
 
-#### UserInfo Endpoint
+### UserInfo Endpoint
 
 <details>
  <summary><code>GET</code> <code><b>/api/v2/userinfo</b></code> </summary>
@@ -354,7 +358,7 @@ http://openid.net/specs/openid-connect-session-1_0.html#RPLogout
 
 </details>
 
-#### Redirection vers le FS après déconnexion
+### Redirection vers le FS après déconnexion
 
 <details>
  <summary><code>GET</code> <code><b>&lt;FS_URL&gt;/&lt;POST_LOGOUT_REDIRECT_URI&gt;</b></code> </summary>
@@ -381,3 +385,11 @@ Exemple de retour vers le FS de mock à déconnexion
 > ```
 
 </details>
+
+---
+
+Voir aussi : 
+
+* [Comment FranceConnect+ utilise le protocole OpenId Connect ?](./technique-env-fc.md)
+* [Comment utiliser les scopes OpenID Connect pour accéder aux données des utilisateurs ?](./technique-scope-fc.md)
+

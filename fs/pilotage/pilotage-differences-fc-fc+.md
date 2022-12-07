@@ -1,4 +1,4 @@
-[Documentation Fournisseur de Service](README.md) > [Devenir Fournisseur de Service FranceConnect+](../../README.md#je-veux-devenir-fournisseur-de-service) > Différences entre FranceConnect et FranceConnect+
+[Documentation Fournisseur](../README.md) > [Je veux devenir Fournisseur de Service](../README.md#je-veux-devenir-fournisseur-de-service) > Quelles sont les différences entre FranceConnect et FranceConnect+ ?
 
 ---
 
@@ -16,3 +16,9 @@ La principale différences entre FranceConnect et FranceConnect+ est le niveau d
 La plateforme FranceConnect supporte uniquement le niveau de garantie faible. C'est la plateforme FranceConnect+ qui assurent les niveaux de garantie supérieur, c'est à dire les niveaux de garantie Substantiel et Élevé. 
 
 ---
+
+Voir aussi : 
+
+* [Qu'est ce qu'eIDAS et quels sont les niveaux de garantie de FranceConnect+ ?](../projet/projet-niveau-eidas.md)
+* [Comment effectuer ma demande d'habilitation pour FranceConnect+ ?](../projet/projet-datapass.md)
+

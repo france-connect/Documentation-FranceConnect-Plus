@@ -1,4 +1,4 @@
-[Documentation Fournisseur de Service](../../README.md) > [Devenir Fournisseur de Service FranceConnect+](../../README.md#je-veux-devenir-fournisseur-de-service) > Intégrer FranceConnect+ lorsque je suis déjà Fournisseur de Service pour FranceConnect
+[Documentation Fournisseur](../README.md) > [Je veux devenir Fournisseur de Service](../README.md#je-veux-devenir-fournisseur-de-service) > Je suis déjà Fournisseur de Service pour FranceConnect, que dois je faire en plus pour devenir Fournisseur de Service pour FranceConnect+ ? 
 
 ---
 
@@ -30,3 +30,11 @@ Les plateformes FranceConnect et FranceConnect+ reposent toutes les deux sur le 
 FranceConnect et FranceConnect+ fournissent un identifiant technique permettant d'identifier de manière unique un utilisateur pour votre service. Par défaut, cette identifiant est différent sur les deux plateforme. Il vous est possible, si vous en avez le besoin, de recevoir le même identifiant pour un même utilisateur pour votre service pour les deux plateformes. 
 
 Pour pouvoir en bénéficier, il suffit de le préciser lors de votre demande de création de votre fournisseur de service. 
+
+--- 
+
+Voir aussi : 
+
+- [Comment effectuer ma demande d'habilitation pour FranceConnect+ ?](../projet/projet-datapass.md)
+- [Comment puis-je réaliser des tests de FranceConnect+ avant de soumettre ma demande d'habilitation ?](../projet/projet-tests-sans-datapass.md)
+- [Comment FranceConnect+ utilise le protocole OpenId Connect ?](../technique/technique-oidc-fc.md)

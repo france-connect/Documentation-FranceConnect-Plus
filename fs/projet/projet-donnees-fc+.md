@@ -1,4 +1,4 @@
-[Documentation Fournisseur de Service](../README.md) > [Gerer un projet d'integration FranceConnect+](../README.md#je-veux-devenir-fournisseur-de-service) > Quelles sont les données que je peux récupérer par FranceConnect+ sur mes usagers ?
+[Documentation Fournisseur de Service](../README.md) > [Je gère un projet d'intégration de FranceConnect+](../README.md#je-veux-devenir-fournisseur-de-service) > Quelles sont les données que je peux récupérer par FranceConnect+ sur mes usagers ?
 
 ---
 

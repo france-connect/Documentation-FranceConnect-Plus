@@ -90,8 +90,8 @@ Les clés publiques de signature de FranceConnect+ sont disponibles via la *JWKS
 
 | Environnement | adresses du endpoint |
 | ------ | ------ |
-| intégration FC | https://auth.integ01.dev-franceconnect.fr/api/v2/jwks |
-| production FC | https://auth.franceconnect.gouv.fr/api/v2/jwks |  
+| intégration | https://auth.integ01.dev-franceconnect.fr/api/v2/jwks |
+| production | https://auth.franceconnect.gouv.fr/api/v2/jwks |  
 
 #### Exposition des clés de chiffrement
 
