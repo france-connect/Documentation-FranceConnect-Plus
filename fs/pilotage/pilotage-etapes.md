@@ -18,7 +18,12 @@ Si votre demande est acceptée, vous devez faire une demande pour pouvoir accéd
 
 ### 4. Faire qualifier votre intégration
 
-Vous présentez vos développements pour une qualification par l'équipe FranceConnect. La durée de cette phase de qualification dépend du [respect des prérequis ](https://partenaires.franceconnect.gouv.fr/monprojet/recetter/)(techniques, sécurité, fonctionnels, UX...). N'hésitez pas à soumettre vos maquettes de parcours en amont pour une pré-qualification fonctionnelle et UX anticipée.
+Vous devez présentez vos développements pour une qualification par l'équipe FranceConnect. La durée de cette phase de qualification dépend du respect des prérequis (techniques, sécurité, fonctionnels, UX...). N'hésitez pas à soumettre vos maquettes de parcours en amont pour une pré-qualification fonctionnelle et UX anticipée. 
+
+Vous retrouvez l'ensemble des pré-requis dans la section *Recette interne* de la démarche simplifiée.
+
+Pour réaliser votre demande de qualification, vous devez utiliser la démarche en ligne suivante : https://www.demarches-simplifiees.fr/commencer/demande-qualification-fs-fcplus. Dans un premier temps, vous devez déjà réaliser par vous même une recette de votre intégration. Une fois votre recette réalisée, vous pouvez demander votre qualification par les équipes FranceConnect.
+
 
 ### 5. Passer en production 
 
