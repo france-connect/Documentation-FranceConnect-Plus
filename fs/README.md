@@ -11,16 +11,11 @@ Cette documentation est à destination des Fournisseurs de Service souhaitant in
 FranceConnect+ met à disposition du Fournisseur de Service des identités de niveau de garantie eIDAS Susbtantiel et Elevé. 
 FranceConnect+ s'implémente sur une plateforme distincte de la plateforme FranceConnect qui reste dédiée aux identités de niveau de garantie "faible".
 
-# Je veux devenir Fournisseur de Service 
+# Je veux devenir fournisseur de services
 
-Vous souhaitez devenir Fournisseur de Service pour FranceConnect+, voici les questions à vous poser : 
+Vous vous poser des questions sur le fonctionnement général de FranceConnect+ et de son écosystème. Vous touverez l'ensemble des réponses à vos questions dans cette section. 
 
-* [Quelles sont les étapes pour devenir Fournisseur de Service ?](pilotage/pilotage-etapes.md)
-* [Quels sont les différents acteurs que je dois faire intervenir dans mon organisation pour devenir Fournisseur de Service ?](pilotage/pilotage-demarches-acteurs.md)
-* [Quelles sont les différences entre FranceConnect et FranceConnect+ ?](pilotage/pilotage-differences-fc-fc+.md)
-* [Quels sont les fournisseurs d'identités disponible sur FranceConnect+ ? ](pilotage/piloge-fi.md)
-* [Je suis déjà Fournisseur de Service pour FranceConnect, que dois je faire en plus pour devenir Fournisseur de Service pour FranceConnect+ ?](pilotage/pilotage-integrer-fc+-apres-fc.md)
-
+[Je veux devenir fournisseur de services](pilotage/README.md)
 
 # Je gère un projet d'intégration de FranceConnect+
 

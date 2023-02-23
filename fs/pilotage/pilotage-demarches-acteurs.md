@@ -1,4 +1,4 @@
-[Documentation Fournisseur](../README.md) > [Je veux devenir Fournisseur de Service](../README.md#je-veux-devenir-fournisseur-de-service) > Quels sont les acteurs à impliquer dans l'intégration de FranceConnect+ ?
+[Documentation Fournisseur](../README.md) > [Je veux devenir Fournisseur de Service](README.md) > Quels sont les acteurs à impliquer dans l'intégration de FranceConnect+ ?
 
 ---
 
