@@ -6,14 +6,14 @@ Vous avez lancé un projet pour devenir FranceConnect+ et vous souhaiter connait
 
 Pour pouvoir utiliser FranceConnect+, il est nécessaire de faire une demande d'habilitation au travers de l'outil [datapass]([datapass](https://datapass.api.gouv.fr/franceconnect/)) mis à disposition par la DINUM.
 
-[Plus d'informations](projet-datapass.md)
+[Plus d'informations](./projet-datapass.md)
 
 
 ### Comment puis-je réaliser des tests de FranceConnect+ avant de soumettre ma demande d'habilitation ?
 
 Contrairement à la plateforme FranceConnect, il est nécessaire d'avoir sa demande d'habilitation (datapass) validée avant de pouvoir utiliser la plateforme FranceConnect+.
 
-[Plus d'informations](projet-tests-sans-datapass.md)
+[Plus d'informations](./projet-tests-sans-datapass.md)
 
 ### Quel est l'écosystème de FranceConnect+ ?
 
@@ -22,7 +22,7 @@ Il existe différents types d'acteur dans l'ecosystème de FranceConnect+ :
 - les fournisseurs de services
 - les fournisseurs de données
 
-[Plus d'informations](projet/projet-ecosysteme-fc+.md)
+[Plus d'informations](./projet-ecosysteme-fc+.md)
 
 
 ### Quelles sont les données que je peux récupérer par FranceConnect+ sur mes usagers ?
