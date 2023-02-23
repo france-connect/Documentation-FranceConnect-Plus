@@ -1,4 +1,4 @@
-[Documentation Fournisseur](../README.md) > [Je veux devenir Fournisseur de Service](../README.md#je-veux-devenir-fournisseur-de-service) > Quelles sont les différences entre FranceConnect et FranceConnect+ ?
+[Documentation Fournisseur](../README.md) > [Je veux devenir Fournisseur de Service](README.md) > Quelles sont les différences entre FranceConnect et FranceConnect+ ?
 
 ---
 

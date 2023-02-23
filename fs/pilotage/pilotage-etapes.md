@@ -1,4 +1,4 @@
-[Documentation Fournisseur](../README.md) > [Je veux devenir Fournisseur de Service](../README.md#je-veux-devenir-fournisseur-de-service) > Quelles sont les étapes pour devenir Fournisseur de Service ? 
+[Documentation Fournisseur](../README.md) > [Je veux devenir Fournisseur de Service](README.md) > Quelles sont les étapes pour devenir Fournisseur de Service ? 
 ---
 
 # Quelles sont les étapes pour devenir Fournisseur de Service ? 
@@ -35,3 +35,5 @@ Si votre implémentation est validée par notre équipe, vous recevez vos secret
 Voir aussi : 
 - [Quels sont les acteurs à impliquer dans l'intégration de FranceConnect+ ?](pilotage-demarches-acteurs.md)
 - [Comment effectuer ma demande d'habilitation pour FranceConnect+ ?](../projet/projet-datapass.md)
+- [Quelles sont les différences entre FranceConnect et FranceConnect+ ?](./pilotage-differences-fc-fc%2B.md)
+- [Je suis déjà Fournisseur de Service pour FranceConnect, que dois je faire en plus pour devenir Fournisseur de Service pour FranceConnect+ ?](./pilotage-integrer-fc%2B-apres-fc.md)

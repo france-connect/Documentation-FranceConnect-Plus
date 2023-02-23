@@ -1,4 +1,4 @@
-[Documentation Fournisseur de Service](../README.md) > [Je gère un projet d'intégration de FranceConnect+](../README.md#je-g%C3%A8re-un-projet-dint%C3%A9gration-de-franceconnect) > eIDAS
+[Documentation Fournisseur de Service](../README.md) > [Je gère un projet d'intégration de FranceConnect+](README.md) > Qu'est ce qu'eIDAS et quels sont les niveaux de garantie de FranceConnect+ ?
 
 ---
 
@@ -48,29 +48,9 @@ Le tableau ci-dessous récapitule les niveaux supportés par les deux plateforme
 | substantiel | Non | Oui | 
 | élevé | Non | A venir |
 
-## Schéma d'identification européen et passelle d'interopérabilité
-
-Le règlement eIDAS demande aux états membre de se doter d'un schéma d'identification et de le rendre interopérable avec les aux états membre européen. 
-
-Le schéma d'identification est le mécanisme d'un pays qui permet à un usager de s'authentifier et de s'identifier. 
-
-L'objectif est de permettre à un usager d'un état membre d'accéder aux service d'un autre état membre en utilisant le schéma d'identification qu'il utilise habituellement. Cela peut permettre, par exemple, à un usager français d'accéder au service des impots belges.
-
-Actuellement, la France ne dispose que d'un seul schéma d'identification utilisable par les autres états membre, il s'agit de FranceConnect+ combiné avec L'identité Numérique La Poste. Cependant, cela ne concerne que les services des autres états membres. 
-
-Il est possible pour un fournisseur de service d'utiliser les schémas d'identification d'un autre état membre. 
-
-## Quels sont les niveaux de garantie accessible via les schémas d'identification des autres états membre ? 
-
-Les niveaux de garanties utilisables via les schémas d'idenitification des autres états membre sont les niveaux substantiels et élevés. Il n'est pas possible de demandés ou d'obtenir des identités de niveau de garantie faible via les schémas d'identification des autres états membres. 
-
-## Comment utiliser les schémas d'identification des autres états membres ? 
-
-L'accès aux schémas d'identification des autres états membres se fait exclusivement via la plateforme FranceConnect+. C'est la DINUM, qui opère FranceConnect et FranceConnect+, qui est chargé de faire le lien entre la plateforme FranceConnect+ et les schémas d'identification des autres états membre. 
-
-### Comment avoir accès aux autres schémas d'identifications européens pour mon fournisseur de service ?
-
-### Comment l'usager d'un autre état membre doit il faire pour accéder à un autre service
-
 
 ---
+
+Voir aussi : 
+
+* [Comment donner accès à mon service à des usagers des autres états membres ?](./projet-fonctionnement-noeud-eidas.md)

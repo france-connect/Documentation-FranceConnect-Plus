@@ -13,21 +13,15 @@ FranceConnect+ s'implémente sur une plateforme distincte de la plateforme Franc
 
 # Je veux devenir fournisseur de services
 
-Vous vous poser des questions sur le fonctionnement général de FranceConnect+ et de son écosystème. Vous touverez l'ensemble des réponses à vos questions dans cette section. 
+Vous vous poser des questions sur le fonctionnement général de FranceConnect+ et de son écosystème. Vous trouverez l'ensemble des réponses à vos questions dans cette section. 
 
 [Je veux devenir fournisseur de services](pilotage/README.md)
 
 # Je gère un projet d'intégration de FranceConnect+
 
-Vous avez lancé un projet pour devenir FranceConnect+ et vous souhaiter connaitre les différentes problématique d'intégration de FranceConnect+, voici les questions à vous poser : 
+Vous allez ou vous avez lancé un projet pour devenir FranceConnect+ et vous souhaiter connaitre les différentes problématique d'intégration de FranceConnect+. Vous souhaitez avoir des informations précises sur les fonctionnement de FranceConnect+ pour gérer un projet d'intégration de FranceConnect+. Vous trouverez l'ensemble des réponses à vos questions dans cette section.
 
-## Je souhaite savoir comment fonctionnement FranceConnect+
-
-- [Quelles sont les données que je peux récupérer par FranceConnect+ sur mes usagers ?](projet/projet-donnees-fc+.md)
-- [Qu'est ce qu'eIDAS et quels sont les niveaux de garantie de FranceConnect+ ?](projet/projet-niveau-eidas.md)
-- [Quel est l'écosystème de FranceConnect+ ?](projet/projet-ecosysteme-fc+.md)
-- [Comment puis-je réaliser des tests de FranceConnect+ avant de soumettre ma demande d'habilitation ?](projet-tests-sans-datapass.md)
-- [Comment effectuer ma demande d'habilitation pour FranceConnect+ ?](../projet/projet-datapass.md)
+[Je gère un projet d'intégration de FranceConnect+](projet/README.md)
 
 # J'intègre FranceConnect+ dans mon service en ligne
 

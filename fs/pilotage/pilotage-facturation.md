@@ -1,4 +1,4 @@
-[Documentation Fournisseur](../README.md) > [Je veux devenir Fournisseur de Service](../README.md#je-veux-devenir-fournisseur-de-service) > L'usage de FranceConnect+ est-il payant?
+[Documentation Fournisseur](../README.md) > [Je veux devenir Fournisseur de Service](README.md) > L'usage de FranceConnect+ est-il payant?
 
 ---
 
