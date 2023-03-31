@@ -68,10 +68,10 @@ les clés de signatures utilisés par le Fournisseur d'Identité doivent être d
 
 ### L'identité pivot
 
-L'identité pivot fait partie des données usagers fournies par les Fournisseurs d'Identité aux Fournisseurs de Service, via FranceConnect . Elle permet d'identifier un utilisateur particulier.
+L'identité pivot fait partie des données usagers fournies par les Fournisseurs d'Identité aux Fournisseurs de Service, via FranceConnect+ . Elle permet d'identifier un utilisateur particulier.
 
 
-| Champs       | Obligatoire | Type   | Description                                                                                                |
+| Claim        | Obligatoire | Type   | Description                                                                                                |
 |--------------|-------------|--------|------------------------------------------------------------------------------------------------------------|
 | given_name   | oui         | string | les prénoms séparés par des espaces (standard OpenIDConnect)                                               |
 | family_name  | oui         | string | le nom de famille de naissance (standard OpenIDConnect)                                                    |
@@ -84,12 +84,24 @@ L'identité pivot fait partie des données usagers fournies par les Fournisseurs
 
 ### Les données complémentaires
 
-| Champs             | Obligatoire | Type   | Description                                                               |
+| Claims             | Obligatoire | Type   | Description                                                               |
 |--------------------|-------------|--------|---------------------------------------------------------------------------|
 | sub                | oui         | string | identifiant technique (standard OpenIDConnect)                            |
 | email              | oui         | string | l'adresse électronique de contact de la personne (standard OpenIDConnect) |
 | preferred_username | non         | string | le nom d'usage (standard OpenIDConnect)                                   |
 
+### Les scopes demandés au fournisseur d'identité par FranceConnect+
+
+Lorsque FranceConnect+ initie une cinématique auprès du fournisseur de service, les scopes demandés sont les suivants : 
+
+- openid 
+- profile 
+- email 
+- preferred_username 
+- birthplace 
+- birthcountry 
+
+[Scopes dans les spécifications OpenID Connect](https://openid.net/specs/openid-connect-core-1_0.html#ScopeClaims)
 
 # Je veux être fournisseur d'identité FranceConnect
 Pour devenir fournisseur d'identité FranceConnect, envoyer votre demande à l'adresse support.partenaires@franceconnect.gouv.fr avec les éléments suivants :
@@ -99,7 +111,7 @@ Pour devenir fournisseur d'identité FranceConnect, envoyer votre demande à l'a
 * Email de contact
 * URL du endpoint d'authentification et d'autorisation
 * URL du endpoint de demande de token
-* URL du endpoint de demande des informations utilisateur (identité pivot)
+* URL du endpoint de demande des informations ut[ilisateur (identité pivot)
 * URL du endpoint de logout ( norme OIDC )
 * URL de endpoint de métadonnée '.well-known/openid-configuration'
 * Status URL (URL pour tester l'état du FI)
