@@ -324,7 +324,7 @@ FranceConnect+ gère plusieurs types de données ayant une durée de vie limité
 * **POST_LOGOUT_REDIRECT_URI :** L'URL de redirection après la demande de déconnexion FC 
 * **CLIENT_ID :** Identifiant du FS, communiqué lors de son inscription auprès de FC 
 * **CLIENT_SECRET :** Le secret du FS, communiqué lors de son inscription auprès de FC 
-* **AUTHZ_CODE :** Code retourné (dans l'URL) par FC au FS lorsque ce dernier fait un appel sur le endpoint FC_URL/api/v1/authorize. Il est ensuite passé (dans le corps de la requête HTTP POST) lors de l'appel sur le endpoint FC_URL/api/v1/token
+* **AUTHZ_CODE :** Code retourné (dans l'URL) par FC au FS lorsque ce dernier fait un appel sur le endpoint FC_URL/api/v2/authorize. Il est ensuite passé (dans le corps de la requête HTTP POST) lors de l'appel sur le endpoint FC_URL/api/v2/token
 * **ACCESS_TOKEN :** oken retourné (dans le corps HTTP) par l'appel au endpoint FC_URL/api/v2/token. Il est ensuite passé lors de l'appel au endpoint FC_URL/api/v2/userinfo 
 * **SCOPES :** Liste des scopes demandés séparés par des espaces (donc par %20 au format unicode dans l'URL)  
 	
