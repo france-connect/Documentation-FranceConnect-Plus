@@ -47,7 +47,8 @@ Tous les échanges de jetons JWT entre le FI et FC sont signés et chiffrés en 
 
 - Hybride :
 
-      - RSA-OEAP + AES256-GCM 
+      - RSA-OEAP + AES256-GCM
+      - RSA-OEAP-256 + AES256-GCM 
       - ECDH-ES + AES256-GCM
 
 Les spécifications des algorithmes de signatures et de chiffrements utilisés sont les suivants : 
